@@ -22,6 +22,8 @@ namespace Audio.Tools
         public Color brushColourAlt = Color.white;
         public AnimationCurve pressureCurve;
 
+        int count;
+
         [Header("References")]
         public ComputeShader paintCompute;
         public Transform brushDisplay;
@@ -35,8 +37,10 @@ namespace Audio.Tools
         [HideInInspector] public RenderTexture combined;
 
         Vector2 lastDrawPos;
+        float pressurePrev;
 
         Vector2 smoothV;
+        float pressureSmoothV;
         bool isResizingBrush;
         Vector2 brushResizeStartCoord;
         Vector2 brushResizeStartWorld;
@@ -44,6 +48,7 @@ namespace Audio.Tools
         Vector2 worldSize;
         Vector2 worldCentre;
         bool isInit;
+        bool isActive = true;
 
         const int drawStrokeKernel = 0;
         const int strokeCompletedKernel = 1;
@@ -76,11 +81,18 @@ namespace Audio.Tools
 
         void Update()
         {
-            if (!isInit) return;
+            brushDisplay.gameObject.SetActive(isActive);
+
+            if (!isInit || !isActive) return;
 
             EditorOnlyUpdate();
             HandleDrawing();
             HandleKeyboardShortcuts();
+        }
+
+        public void SetActive(bool active)
+        {
+            isActive = active;
         }
 
         void HandleDrawing()
@@ -102,16 +114,16 @@ namespace Audio.Tools
                 brushRadius = (brushResizeStartCoord - CalculateBrushCoord()).magnitude;
             }
 
-            Vector2 targetBrushPos = CalculateBrushCoord();
+            Vector2 targetPenPos = CalculateBrushCoord();
             bool isDrawing = Mouse.current.leftButton.isPressed && !isResizingBrush;
             bool startedDrawingThisFrame = Mouse.current.leftButton.wasPressedThisFrame;
 
             if (startedDrawingThisFrame)
             {
-                lastDrawPos = targetBrushPos;
+                lastDrawPos = targetPenPos;
             }
 
-            Vector2 brushCoord = Vector2.SmoothDamp(lastDrawPos, targetBrushPos, ref smoothV, temporalSmoothTime);
+            Vector2 brushCoord = Vector2.SmoothDamp(lastDrawPos, targetPenPos, ref smoothV, temporalSmoothTime);
             Vector2 brushPosWord = BrushPosWorld();
             brushDisplay.position = isResizingBrush ? new Vector3(brushResizeStartWorld.x, brushResizeStartWorld.y, -1) : new Vector3(brushPosWord.x, brushPosWord.y, -1);
 
@@ -146,9 +158,10 @@ namespace Audio.Tools
             }
         }
 
-        static Vector2 BrushPosScreenSpace()
+        Vector2 BrushPosScreenSpace()
         {
-            return Mouse.current.position.ReadValue();
+            Vector2 pos = (TabletPenInRange()) ? Pen.current.position.ReadValue() : Mouse.current.position.ReadValue();
+            return pos;
         }
 
         Vector2 BrushPosWorld()
@@ -158,7 +171,7 @@ namespace Audio.Tools
             return posWorld;
         }
 
-        // Calculates brush position relative to canvas (0,0) = bottom left; (width-1, height-1) = top right
+        // Calculates pen position relative to canvas (0,0) = bottom left; (width-1, height-1) = top right
         Vector2 CalculateBrushCoord()
         {
             Vector2 posWorld = BrushPosWorld();
@@ -199,13 +212,18 @@ namespace Audio.Tools
                 paintCompute.SetInts("boundsBottomLeft", boundsMinX, boundsMinY);
 
                 // Brush settings
-                paintCompute.SetFloat("pressure", 1);
-                paintCompute.SetFloat("pressurePrevious", 1);
+                float pressure = TabletPenInRange() ? Mathf.Clamp01(pressureCurve.Evaluate(Pen.current.pressure.ReadValue())) : 1;
+                pressure = Mathf.SmoothDamp(pressurePrev, pressure, ref pressureSmoothV, pressureSmoothTime);
+                paintCompute.SetFloat("pressure", pressure);
+                paintCompute.SetFloat("pressurePrevious", pressurePrev);
+                pressurePrev = pressure;
                 //float pressureAlpha = Mathf.InverseLerp(0.05f, 0.5f, pressure);
                 paintCompute.SetFloat("brushRadius", brushRadius);
                 paintCompute.SetFloat("brushSmoothT", brushSmoothT);
                 paintCompute.SetFloat("alphaMultiplier", alphaMultiplier);
-                paintCompute.SetVector("brushColour", InputHelper.AltIsHeld ? brushColourAlt : brushColour);
+
+                Color c = brushColour;
+                paintCompute.SetVector("brushColour", InputHelper.AltIsHeld ? brushColourAlt : c);
 
                 ComputeHelper.Dispatch(paintCompute, boundsWidth, boundsHeight, kernelIndex: drawStrokeKernel);
             }
@@ -238,6 +256,11 @@ namespace Audio.Tools
             paintCompute.SetInts("size", canvas.width, canvas.height);
         }
 
+        bool TabletPenInRange()
+        {
+            return Pen.current.inRange.isPressed;
+        }
+
         void EditorOnlyUpdate()
         {
             // Rebind in editor so continues working if script/shader is recompiled
@@ -250,6 +273,11 @@ namespace Audio.Tools
         void OnDestroy()
         {
             ComputeHelper.Release(canvas, activeStrokeCanvas, combined);
+        }
+
+        public void SetBrushColour(Color col)
+        {
+            brushColour = col;
         }
     }
 }

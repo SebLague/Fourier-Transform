@@ -5,7 +5,7 @@ using System;
 
 namespace Seb.Helpers
 {
-// ---- Version 0.8 [27/Dec/2025] ----
+// ---- Version 1.0 [07/Jan/2026] ----
 // This class contains some helper functions to make life a little easier working with compute shaders (Very work-in-progress!)
 
     public static class ComputeHelper
@@ -14,7 +14,6 @@ namespace Seb.Helpers
 
         // Common texture formats
         public const GraphicsFormat RGBA_SFloat = GraphicsFormat.R32G32B32A32_SFloat;
-        public const GraphicsFormat RGB_SFloat = GraphicsFormat.R32G32B32_SFloat;
         public const GraphicsFormat RG_SFloat = GraphicsFormat.R32G32_SFloat;
         public const GraphicsFormat R_SFloat = GraphicsFormat.R32_SFloat;
 
@@ -67,7 +66,7 @@ namespace Seb.Helpers
             Vector3Int threadGroupSizes = GetThreadGroupSizes(cs, kernelIndex);
             Dispatch(cs, texture.width, texture.height, texture.volumeDepth, kernelIndex);
         }
-        
+
         public static void Dispatch<T>(ComputeShader cs, RenderTexture texture, T kernel) where T : Enum
         {
             Dispatch(cs, texture, Convert.ToInt32(kernel));
@@ -78,7 +77,7 @@ namespace Seb.Helpers
             Vector3Int threadGroupSizes = GetThreadGroupSizes(cs, kernelIndex);
             Dispatch(cs, texture.width, texture.height, 1, kernelIndex);
         }
-        
+
         public static void Dispatch<T>(ComputeShader cs, Texture2D texture, T kernel) where T : Enum
         {
             Dispatch(cs, texture, Convert.ToInt32(kernel));
@@ -635,5 +634,37 @@ namespace Seb.Helpers
         None = 0,
         Depth16 = 16,
         Depth24 = 24
+    }
+
+    public class ComputeKernel
+    {
+        public readonly ComputeShader shader;
+        public readonly int kernelIndex;
+
+        ComputeKernel(ComputeShader shader, int kernelIndex)
+        {
+            this.shader = shader;
+            this.kernelIndex = kernelIndex;
+        }
+
+        public static ComputeKernel Create<T>(ComputeShader shader, T kernel) where T : Enum
+        {
+            return new ComputeKernel(shader, Convert.ToInt32(kernel));
+        }
+
+        public static ComputeKernel Create(ComputeShader shader, int kernelIndex)
+        {
+            return new ComputeKernel(shader, kernelIndex);
+        }
+
+        public void SetBuffer(string name, ComputeBuffer buffer) => shader.SetBuffer(kernelIndex, name, buffer);
+        public void SetBuffer(int id, ComputeBuffer buffer) => shader.SetBuffer(kernelIndex, id, buffer);
+        public void SetTexture(string name, Texture tex) => shader.SetTexture(kernelIndex, name, tex);
+        public void SetTexture(int id, Texture tex) => shader.SetTexture(kernelIndex, id, tex);
+
+        public void Dispatch(int numX, int numY = 1, int numZ = 1)
+        {
+            ComputeHelper.Dispatch(shader, numX, numY, numZ, kernelIndex);
+        }
     }
 }

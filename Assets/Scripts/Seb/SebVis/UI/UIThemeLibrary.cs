@@ -29,7 +29,7 @@ namespace Seb.Visualization.UI
 
         static readonly ThemeSettings blue = red;
 
-        public static UIThemeCLASS CreateTheme(ThemeName themeName)
+        public static UITheme CreateTheme(ThemeName themeName)
         {
             return themeName switch
             {
@@ -39,15 +39,17 @@ namespace Seb.Visualization.UI
             };
         }
 
-        public static UIThemeCLASS CreateTheme(ThemeSettings settings)
+        public static UITheme CreateTheme(ThemeSettings settings)
         {
             ButtonTheme buttonTheme = CreateButtonTheme(settings);
 
-            return new UIThemeCLASS()
+            return new UITheme()
             {
                 font = settings.Font,
                 textSize = settings.FontSize,
                 panelCol = settings.Panel,
+                panelOutlineCol =  settings.PanelOutline,
+                panelOutlineThickness = settings.PanelOutlineThickness,
                 // elements
                 buttonTheme = buttonTheme,
                 wheelSelector = CreateWheelSelectorTheme(settings, buttonTheme),
@@ -71,7 +73,8 @@ namespace Seb.Visualization.UI
                 font = settings.Font,
                 fontSize = settings.FontSize,
                 focusBorderCol = settings.AccentBright,
-                textCol = Color.black
+                textCol = Color.black,
+                borderThickness = settings.PanelOutlineThickness
             };
 
         static ButtonTheme CreateButtonTheme(ThemeSettings settings) =>
@@ -104,6 +107,8 @@ namespace Seb.Visualization.UI
             public FontType Font;
             public float FontSize;
             public Color Panel;
+            public Color PanelOutline;
+            public float PanelOutlineThickness;
             public Color Base;
             public Color AccentBright;
             public Color AccentDark;

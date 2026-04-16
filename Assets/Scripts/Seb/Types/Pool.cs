@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using Seb.Visualization.UI;
 
 namespace Seb.Types
 {
@@ -51,7 +52,7 @@ namespace Seb.Types
 			{
 				return GetNextAvailable();
 			}
-
+			
 			T newItem;
 			if (creator != null)
 			{

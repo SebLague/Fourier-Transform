@@ -5,9 +5,9 @@ namespace Seb.Visualization.UI.Examples
     public class ThemeSelector : MonoBehaviour
     {
         public UIThemeLibrary.ThemeName themeName;
-        UIThemeCLASS activeTheme;
+        UITheme activeTheme;
 
-        public UIThemeCLASS ActiveTheme
+        public UITheme ActiveTheme
         {
             get { return UIThemeLibrary.CreateTheme(themeName); }
             /*

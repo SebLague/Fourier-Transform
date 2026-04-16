@@ -1,0 +1,3358 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!29 &1
+OcclusionCullingSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_OcclusionBakeSettings:
+    smallestOccluder: 5
+    smallestHole: 0.25
+    backfaceThreshold: 100
+  m_SceneGUID: 00000000000000000000000000000000
+  m_OcclusionCullingData: {fileID: 0}
+--- !u!104 &2
+RenderSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 10
+  m_Fog: 0
+  m_FogColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+  m_FogMode: 3
+  m_FogDensity: 0.01
+  m_LinearFogStart: 0
+  m_LinearFogEnd: 300
+  m_AmbientSkyColor: {r: 0.212, g: 0.227, b: 0.259, a: 1}
+  m_AmbientEquatorColor: {r: 0.114, g: 0.125, b: 0.133, a: 1}
+  m_AmbientGroundColor: {r: 0.047, g: 0.043, b: 0.035, a: 1}
+  m_AmbientIntensity: 1
+  m_AmbientMode: 3
+  m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
+  m_SkyboxMaterial: {fileID: 0}
+  m_HaloStrength: 0.5
+  m_FlareStrength: 1
+  m_FlareFadeSpeed: 3
+  m_HaloTexture: {fileID: 0}
+  m_SpotCookie: {fileID: 10001, guid: 0000000000000000e000000000000000, type: 0}
+  m_DefaultReflectionMode: 0
+  m_DefaultReflectionResolution: 128
+  m_ReflectionBounces: 1
+  m_ReflectionIntensity: 1
+  m_CustomReflection: {fileID: 0}
+  m_Sun: {fileID: 0}
+  m_UseRadianceAmbientProbe: 0
+--- !u!157 &3
+LightmapSettings:
+  m_ObjectHideFlags: 0
+  serializedVersion: 13
+  m_BakeOnSceneLoad: 0
+  m_GISettings:
+    serializedVersion: 2
+    m_BounceScale: 1
+    m_IndirectOutputScale: 1
+    m_AlbedoBoost: 1
+    m_EnvironmentLightingMode: 0
+    m_EnableBakedLightmaps: 0
+    m_EnableRealtimeLightmaps: 0
+  m_LightmapEditorSettings:
+    serializedVersion: 12
+    m_Resolution: 2
+    m_BakeResolution: 40
+    m_AtlasSize: 1024
+    m_AO: 0
+    m_AOMaxDistance: 1
+    m_CompAOExponent: 1
+    m_CompAOExponentDirect: 0
+    m_ExtractAmbientOcclusion: 0
+    m_Padding: 2
+    m_LightmapParameters: {fileID: 0}
+    m_LightmapsBakeMode: 1
+    m_TextureCompression: 1
+    m_ReflectionCompression: 2
+    m_MixedBakeMode: 2
+    m_BakeBackend: 0
+    m_PVRSampling: 1
+    m_PVRDirectSampleCount: 32
+    m_PVRSampleCount: 500
+    m_PVRBounces: 2
+    m_PVREnvironmentSampleCount: 500
+    m_PVREnvironmentReferencePointCount: 2048
+    m_PVRFilteringMode: 2
+    m_PVRDenoiserTypeDirect: 0
+    m_PVRDenoiserTypeIndirect: 0
+    m_PVRDenoiserTypeAO: 0
+    m_PVRFilterTypeDirect: 0
+    m_PVRFilterTypeIndirect: 0
+    m_PVRFilterTypeAO: 0
+    m_PVREnvironmentMIS: 0
+    m_PVRCulling: 1
+    m_PVRFilteringGaussRadiusDirect: 1
+    m_PVRFilteringGaussRadiusIndirect: 5
+    m_PVRFilteringGaussRadiusAO: 2
+    m_PVRFilteringAtrousPositionSigmaDirect: 0.5
+    m_PVRFilteringAtrousPositionSigmaIndirect: 2
+    m_PVRFilteringAtrousPositionSigmaAO: 1
+    m_ExportTrainingData: 0
+    m_TrainingDataDestination: TrainingData
+    m_LightProbeSampleCountMultiplier: 4
+  m_LightingDataAsset: {fileID: 0}
+  m_LightingSettings: {fileID: 0}
+--- !u!196 &4
+NavMeshSettings:
+  serializedVersion: 2
+  m_ObjectHideFlags: 0
+  m_BuildSettings:
+    serializedVersion: 3
+    agentTypeID: 0
+    agentRadius: 0.5
+    agentHeight: 2
+    agentSlope: 45
+    agentClimb: 0.4
+    ledgeDropHeight: 0
+    maxJumpAcrossDistance: 0
+    minRegionArea: 2
+    manualCellSize: 0
+    cellSize: 0.16666667
+    manualTileSize: 0
+    tileSize: 256
+    buildHeightMesh: 0
+    maxJobWorkers: 0
+    preserveTilesOutsideBounds: 0
+    debug:
+      m_Flags: 0
+  m_NavMeshData: {fileID: 0}
+--- !u!1 &23916953
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 23916954}
+  - component: {fileID: 23916955}
+  m_Layer: 0
+  m_Name: Curves ADR
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &23916954
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 23916953}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 17.52, y: 7.6, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 770940582}
+  - {fileID: 82957145}
+  - {fileID: 1689846108}
+  m_Father: {fileID: 395751527}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &23916955
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 23916953}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 44d42d685d395b149aa362feba325a28, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::EnvelopeCreatorADR
+  Sustain: 0
+  curveAttack: {fileID: 770940584}
+  curveDecay: {fileID: 82957147}
+  curveRelease: {fileID: 1689846110}
+  useDecay: 0
+  spacingX: 9.26
+  spaceVertical: 0
+--- !u!1 &25332011
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 25332014}
+  - component: {fileID: 25332012}
+  - component: {fileID: 25332013}
+  m_Layer: 0
+  m_Name: Curve (release)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &25332012
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 25332011}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cae25643358634045a3e9c05a00741c2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Audio.Display.CurveWidget
+  themeCol: 3
+  title: RELEASE
+  titleOffset: {x: 0.12, y: 0.315}
+  showAmplitudeCurveInDecibelMode: 0
+  displaySettings:
+    displayResolution: 128
+    anchorSize: 0.11
+    inputFieldSize: {x: 0, y: 0.02}
+    inputFieldTextPad: 0.15
+  useRemapCurve: 0
+  mappingCurve: {fileID: 0}
+  valueDragSensitivity: 50
+  curve:
+    anchorA: {x: 0, y: 1}
+    controlA: {x: 0, y: 0.09946513}
+    controlB: {x: 0.16163063, y: 0}
+    anchorB: {x: 1, y: 0}
+  sustain: 0
+  axisInfo: {fileID: 25332013}
+--- !u!114 &25332013
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 25332011}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2eacafbf3d2896b4495f28de45ed1ad6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Audio.Tools.AxesWidgetAddon
+  drawInputField: 1
+  minMaxX: {x: 0, y: 150}
+  minMaxY: {x: 0, y: 1}
+  showAxisLabelsX: 0
+  showAxisLabelsY: 0
+  xAxisLabelTargetSpacing: 0.75
+  yAxisLabelTargetSpacing: 0
+  labelCol: {r: 1, g: 1, b: 1, a: 1}
+  padFactor: 1
+  parentWidget: {fileID: 25332012}
+--- !u!4 &25332014
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 25332011}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 9.26, y: 0, z: 0}
+  m_LocalScale: {x: 8.5, y: 9.25, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 983439362}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &82957144
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 82957145}
+  - component: {fileID: 82957147}
+  - component: {fileID: 82957146}
+  m_Layer: 0
+  m_Name: Curve (decay)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &82957145
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 82957144}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 8.5, y: 9.25, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 23916954}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &82957146
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 82957144}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2eacafbf3d2896b4495f28de45ed1ad6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Audio.Tools.AxesWidgetAddon
+  drawInputField: 1
+  minMaxX: {x: 0, y: 3000}
+  minMaxY: {x: 0, y: 1}
+  showAxisLabelsX: 0
+  showAxisLabelsY: 0
+  xAxisLabelTargetSpacing: 0.75
+  yAxisLabelTargetSpacing: 0
+  labelCol: {r: 1, g: 1, b: 1, a: 1}
+  padFactor: 1
+  parentWidget: {fileID: 82957147}
+--- !u!114 &82957147
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 82957144}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cae25643358634045a3e9c05a00741c2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Audio.Display.CurveWidget
+  themeCol: 1
+  title: DECAY
+  titleOffset: {x: 0.12, y: 0.315}
+  showAmplitudeCurveInDecibelMode: 1
+  displaySettings:
+    displayResolution: 128
+    anchorSize: 0.11
+    inputFieldSize: {x: 0, y: 0.02}
+    inputFieldTextPad: 0.15
+  useRemapCurve: 0
+  mappingCurve: {fileID: 0}
+  valueDragSensitivity: 50
+  curve:
+    anchorA: {x: 0, y: 1}
+    controlA: {x: 0.010002375, y: 0}
+    controlB: {x: 0.030007314, y: 0}
+    anchorB: {x: 1, y: 0}
+  sustain: 0
+  axisInfo: {fileID: 82957146}
+--- !u!1 &88121428
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 88121430}
+  - component: {fileID: 88121429}
+  m_Layer: 0
+  m_Name: Compressor
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &88121429
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 88121428}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 05235dc92c5fcb94ab5b78709f279281, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CompressorTest
+  themeCol: 4
+  title: COMPRESSOR
+  titleOffset: {x: 0.09, y: 0.33}
+  thresholdLineCol: {r: 0.59607846, g: 0.19607843, b: 0.8784314, a: 1}
+  smoothLineCol: {r: 0.26666668, g: 0.08235294, b: 0.41568628, a: 1}
+  maxInputCol: {r: 1, g: 1, b: 1, a: 1}
+  labelCol: {r: 1, g: 1, b: 1, a: 1}
+  reduceCol: {r: 0.9607843, g: 0.21176471, b: 0.34509805, a: 1}
+  dbMin: -60
+  dbMax: 0
+  threshold: -12.97596
+  smoothWidth: 17.9
+  ratio: 3.4
+  attackSpeed: 100
+  decaySpeed: 100
+  displayResolution: 256
+  info_compressThresholdAmp: 0.2244926
+  targetReductionDB: 0.00000013399547
+  smoothedReductionDB: 0.0000021980197
+--- !u!4 &88121430
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 88121428}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 14.17, y: -4.5, z: 0}
+  m_LocalScale: {x: 8.3, y: 8.3, z: 0.92222226}
+  m_ConstrainProportionsScale: 1
+  m_Children: []
+  m_Father: {fileID: 1565266039}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &124828902
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 124828905}
+  - component: {fileID: 124828903}
+  - component: {fileID: 124828906}
+  m_Layer: 0
+  m_Name: Synth - Piano-ish
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!114 &124828903
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 124828902}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 14dddce4380ec224e9b4e1ef15f2f229, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Music.Synth.Controller.SynthWaveController
+  audioSystem: {fileID: 500291275}
+  synth: {fileID: 124828906}
+  piano: {fileID: 2047246413}
+--- !u!4 &124828905
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 124828902}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 2, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 2074501592}
+  - {fileID: 145680674}
+  - {fileID: 288399993}
+  - {fileID: 543726200}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &124828906
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 124828902}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9f6ce6db18c0aab40ae8368d331398b9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Audio.Synth.SynthVid
+  autoReleaseNotes: 0
+  compressor: {fileID: 2074501591}
+  envelopeCreator: {fileID: 288399992}
+  synthKeyFrames:
+  - name: C2
+    note:
+      noteLetter: 0
+      isSharp: 0
+      octaveNumber: 2
+    overtoneCreator: {fileID: 1159698681}
+    decayDurationFactor: 3
+    harmonicAmplitudes:
+    - 0.03703704
+    - 0.07407408
+    - 0.22222224
+    - 0.15308644
+    - 0.18024692
+    - 0.21481483
+    - 0.24691358
+    - 0.04938272
+    - 0.03703704
+    - 0.05679013
+    - 0.11111112
+    - 0.05432099
+    - 0.22716051
+    - 0.04938272
+    - 0.04938272
+    - 0.03703704
+    harmonicAmplitudes_Display:
+    - 0.15
+    - 0.3
+    - 0.9
+    - 0.62
+    - 0.73
+    - 0.87
+    - 1
+    - 0.2
+    - 0.15
+    - 0.23
+    - 0.45
+    - 0.22
+    - 0.92
+    - 0.2
+    - 0.2
+    - 0.15
+  - name: C3
+    note:
+      noteLetter: 0
+      isSharp: 0
+      octaveNumber: 3
+    overtoneCreator: {fileID: 1552269726}
+    decayDurationFactor: 2
+    harmonicAmplitudes:
+    - 0.04368932
+    - 0.43689322
+    - 0.18786408
+    - 0.04368932
+    - 0.1485437
+    - 0.10048544
+    - 0.30582526
+    - 0.034951456
+    - 0.052427184
+    - 0.10048544
+    - 0.04805825
+    - 0.07427185
+    - 0.026213592
+    - 0.10048544
+    - 0.078640774
+    - 0.017475728
+    harmonicAmplitudes_Display:
+    - 0.1
+    - 1
+    - 0.43
+    - 0.1
+    - 0.34
+    - 0.23
+    - 0.7
+    - 0.08
+    - 0.12
+    - 0.23
+    - 0.11
+    - 0.17
+    - 0.06
+    - 0.23
+    - 0.18
+    - 0.04
+  - name: C4
+    note:
+      noteLetter: 0
+      isSharp: 0
+      octaveNumber: 4
+    overtoneCreator: {fileID: 784883634}
+    decayDurationFactor: 1
+    harmonicAmplitudes:
+    - 0.57937425
+    - 0.17381229
+    - 0.06546929
+    - 0.052143686
+    - 0.024913093
+    - 0.052143686
+    - 0.035921205
+    - 0.0063731167
+    - 0.004634994
+    - 0.0011587485
+    - 0.0011587485
+    - 0.0011587485
+    - 0.00057937426
+    - 0.00028968713
+    - 0.00057937426
+    - 0.00028968713
+    harmonicAmplitudes_Display:
+    - 1
+    - 0.3
+    - 0.113
+    - 0.09
+    - 0.043
+    - 0.09
+    - 0.062
+    - 0.011
+    - 0.008
+    - 0.002
+    - 0.002
+    - 0.002
+    - 0.001
+    - 0.0005
+    - 0.001
+    - 0.0005
+  - name: C6
+    note:
+      noteLetter: 0
+      isSharp: 0
+      octaveNumber: 6
+    overtoneCreator: {fileID: 1861160373}
+    decayDurationFactor: 1
+    harmonicAmplitudes: []
+    harmonicAmplitudes_Display: []
+  decayRateCurve: {fileID: 543726199}
+  info_numActiveNotes: 0
+--- !u!1 &145680673
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 145680674}
+  m_Layer: 0
+  m_Name: Harmonics
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &145680674
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 145680673}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -13.9, y: 2.73, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1159698682}
+  - {fileID: 1552269727}
+  - {fileID: 784883635}
+  - {fileID: 1861160374}
+  m_Father: {fileID: 124828905}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &217207325
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 217207329}
+  - component: {fileID: 217207328}
+  - component: {fileID: 217207327}
+  - component: {fileID: 217207326}
+  m_Layer: 0
+  m_Name: Main Camera
+  m_TagString: MainCamera
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &217207326
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 217207325}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 63ffb9a06eaa8a345aa352115376fa13, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Seb.Helpers.DragCam2D
+  zoomSpeed: 1
+  zoomToMouse: 1
+  zoomRange: {x: 0.0001, y: 1000}
+  zoomInKey: 0
+  zoomOutKey: 0
+--- !u!81 &217207327
+AudioListener:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 217207325}
+  m_Enabled: 1
+--- !u!20 &217207328
+Camera:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 217207325}
+  m_Enabled: 1
+  serializedVersion: 2
+  m_ClearFlags: 2
+  m_BackGroundColor: {r: 0, g: 0, b: 0, a: 0}
+  m_projectionMatrixMode: 1
+  m_GateFitMode: 2
+  m_FOVAxisMode: 0
+  m_Iso: 200
+  m_ShutterSpeed: 0.005
+  m_Aperture: 16
+  m_FocusDistance: 10
+  m_FocalLength: 50
+  m_BladeCount: 5
+  m_Curvature: {x: 2, y: 11}
+  m_BarrelClipping: 0.25
+  m_Anamorphism: 0
+  m_SensorSize: {x: 36, y: 24}
+  m_LensShift: {x: 0, y: 0}
+  m_NormalizedViewPortRect:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 1
+    height: 1
+  near clip plane: 0.3
+  far clip plane: 1000
+  field of view: 60
+  orthographic: 1
+  orthographic size: 18.2
+  m_Depth: -1
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_RenderingPath: -1
+  m_TargetTexture: {fileID: 0}
+  m_TargetDisplay: 0
+  m_TargetEye: 0
+  m_HDR: 1
+  m_AllowMSAA: 0
+  m_AllowDynamicResolution: 0
+  m_ForceIntoRT: 0
+  m_OcclusionCulling: 0
+  m_StereoConvergence: 10
+  m_StereoSeparation: 0.022
+--- !u!4 &217207329
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 217207325}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -10}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &288399991
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 288399993}
+  - component: {fileID: 288399992}
+  m_Layer: 0
+  m_Name: Curves ADR
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &288399992
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 288399991}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 44d42d685d395b149aa362feba325a28, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::EnvelopeCreatorADR
+  Sustain: 0
+  curveAttack: {fileID: 1124268874}
+  curveDecay: {fileID: 1591899736}
+  curveRelease: {fileID: 896149433}
+  useDecay: 1
+  spacingX: 9.26
+  spaceVertical: 0
+--- !u!4 &288399993
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 288399991}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 17.52, y: 7.6, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1124268875}
+  - {fileID: 1591899737}
+  - {fileID: 896149434}
+  m_Father: {fileID: 124828905}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &389287073
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 389287074}
+  m_Layer: 0
+  m_Name: Harmonics
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &389287074
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 389287073}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -13.9, y: 2.73, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1731470554}
+  - {fileID: 1157872014}
+  - {fileID: 809327073}
+  - {fileID: 1615991901}
+  m_Father: {fileID: 395751527}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &395751524
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 395751527}
+  - component: {fileID: 395751526}
+  - component: {fileID: 395751525}
+  m_Layer: 0
+  m_Name: Synth - Marimba-ish
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!114 &395751525
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 395751524}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9f6ce6db18c0aab40ae8368d331398b9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Audio.Synth.SynthVid
+  autoReleaseNotes: 1
+  compressor: {fileID: 1590348689}
+  envelopeCreator: {fileID: 23916955}
+  synthKeyFrames:
+  - name: C2
+    note:
+      noteLetter: 0
+      isSharp: 0
+      octaveNumber: 2
+    overtoneCreator: {fileID: 1731470556}
+    decayDurationFactor: 3
+    harmonicAmplitudes:
+    - 0.03703704
+    - 0.07407408
+    - 0.22222224
+    - 0.15308644
+    - 0.18024692
+    - 0.21481483
+    - 0.24691358
+    - 0.04938272
+    - 0.03703704
+    - 0.05679013
+    - 0.11111112
+    - 0.05432099
+    - 0.22716051
+    - 0.04938272
+    - 0.04938272
+    - 0.03703704
+    harmonicAmplitudes_Display:
+    - 0.15
+    - 0.3
+    - 0.9
+    - 0.62
+    - 0.73
+    - 0.87
+    - 1
+    - 0.2
+    - 0.15
+    - 0.23
+    - 0.45
+    - 0.22
+    - 0.92
+    - 0.2
+    - 0.2
+    - 0.15
+  - name: C3
+    note:
+      noteLetter: 0
+      isSharp: 0
+      octaveNumber: 3
+    overtoneCreator: {fileID: 1157872016}
+    decayDurationFactor: 2
+    harmonicAmplitudes:
+    - 0.04368932
+    - 0.43689322
+    - 0.18786408
+    - 0.04368932
+    - 0.1485437
+    - 0.10048544
+    - 0.30582526
+    - 0.034951456
+    - 0.052427184
+    - 0.10048544
+    - 0.04805825
+    - 0.07427185
+    - 0.026213592
+    - 0.10048544
+    - 0.078640774
+    - 0.017475728
+    harmonicAmplitudes_Display:
+    - 0.1
+    - 1
+    - 0.43
+    - 0.1
+    - 0.34
+    - 0.23
+    - 0.7
+    - 0.08
+    - 0.12
+    - 0.23
+    - 0.11
+    - 0.17
+    - 0.06
+    - 0.23
+    - 0.18
+    - 0.04
+  - name: C4
+    note:
+      noteLetter: 0
+      isSharp: 0
+      octaveNumber: 4
+    overtoneCreator: {fileID: 809327075}
+    decayDurationFactor: 1
+    harmonicAmplitudes:
+    - 0.57937425
+    - 0.17381229
+    - 0.06546929
+    - 0.052143686
+    - 0.024913093
+    - 0.052143686
+    - 0.035921205
+    - 0.0063731167
+    - 0.004634994
+    - 0.0011587485
+    - 0.0011587485
+    - 0.0011587485
+    - 0.00057937426
+    - 0.00028968713
+    - 0.00057937426
+    - 0.00028968713
+    harmonicAmplitudes_Display:
+    - 1
+    - 0.3
+    - 0.113
+    - 0.09
+    - 0.043
+    - 0.09
+    - 0.062
+    - 0.011
+    - 0.008
+    - 0.002
+    - 0.002
+    - 0.002
+    - 0.001
+    - 0.0005
+    - 0.001
+    - 0.0005
+  - name: C6
+    note:
+      noteLetter: 0
+      isSharp: 0
+      octaveNumber: 6
+    overtoneCreator: {fileID: 1615991899}
+    decayDurationFactor: 1
+    harmonicAmplitudes: []
+    harmonicAmplitudes_Display: []
+  decayRateCurve: {fileID: 1293723135}
+  info_numActiveNotes: 0
+--- !u!114 &395751526
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 395751524}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 14dddce4380ec224e9b4e1ef15f2f229, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Music.Synth.Controller.SynthWaveController
+  audioSystem: {fileID: 500291275}
+  synth: {fileID: 395751525}
+  piano: {fileID: 2047246413}
+--- !u!4 &395751527
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 395751524}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 2, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1590348690}
+  - {fileID: 389287074}
+  - {fileID: 23916954}
+  - {fileID: 1293723137}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &481622647
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 481622648}
+  - component: {fileID: 481622650}
+  - component: {fileID: 481622649}
+  m_Layer: 0
+  m_Name: Curve (attack)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &481622648
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 481622647}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -9.26, y: 0, z: 0}
+  m_LocalScale: {x: 8.5, y: 9.25, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 983439362}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &481622649
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 481622647}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2eacafbf3d2896b4495f28de45ed1ad6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Audio.Tools.AxesWidgetAddon
+  drawInputField: 1
+  minMaxX: {x: 0, y: 30}
+  minMaxY: {x: 0, y: 1}
+  showAxisLabelsX: 0
+  showAxisLabelsY: 0
+  xAxisLabelTargetSpacing: 0.75
+  yAxisLabelTargetSpacing: 0
+  labelCol: {r: 1, g: 1, b: 1, a: 1}
+  padFactor: 1
+  parentWidget: {fileID: 481622650}
+--- !u!114 &481622650
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 481622647}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cae25643358634045a3e9c05a00741c2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Audio.Display.CurveWidget
+  themeCol: 0
+  title: ATTACK
+  titleOffset: {x: 0.12, y: 0.315}
+  showAmplitudeCurveInDecibelMode: 0
+  displaySettings:
+    displayResolution: 128
+    anchorSize: 0.11
+    inputFieldSize: {x: 0, y: 0.02}
+    inputFieldTextPad: 0.15
+  useRemapCurve: 0
+  mappingCurve: {fileID: 0}
+  valueDragSensitivity: 50
+  curve:
+    anchorA: {x: 0, y: 0}
+    controlA: {x: 0, y: 0.72635984}
+    controlB: {x: 0.3826357, y: 1}
+    anchorB: {x: 1, y: 1}
+  sustain: 0
+  axisInfo: {fileID: 481622649}
+--- !u!1 &500291274
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 500291277}
+  - component: {fileID: 500291275}
+  - component: {fileID: 500291276}
+  m_Layer: 0
+  m_Name: Audio System
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &500291275
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 500291274}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d8f76a339218171458236ad192feff24, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::AudioSystem
+  amplitudeMultiplier: 1
+  sampleRate: 48000
+  info_numChannels: 0
+  bufferLength: 256
+  numBuffers: 4
+  batchesPerSecond: 187
+  numTicks: 17928192
+  debugInfo_audioTime: 373.49335
+--- !u!82 &500291276
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 500291274}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_Resource: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!4 &500291277
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 500291274}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &543726197
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 543726200}
+  - component: {fileID: 543726199}
+  - component: {fileID: 543726198}
+  m_Layer: 0
+  m_Name: Frequency Falloff
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &543726198
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 543726197}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2eacafbf3d2896b4495f28de45ed1ad6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::AxesWidgetAddon
+  drawInputField: 0
+  minMaxX: {x: 0, y: 8000}
+  minMaxY: {x: 1, y: 8}
+  showAxisLabelsX: 1
+  showAxisLabelsY: 1
+  xAxisLabelTargetSpacing: 2
+  yAxisLabelTargetSpacing: 1.38
+  labelCol: {r: 1, g: 1, b: 1, a: 1}
+  padFactor: 1.5
+  parentWidget: {fileID: 543726199}
+--- !u!114 &543726199
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 543726197}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a365d9da61e25d74fbaa3fec066d3196, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Audio.Tools.LineWidget
+  themeCol: 5
+  title: FREQUENCY DECAY MULTIPLIER
+  titleOffset: {x: 0, y: 0.33}
+  discreteResolution: 512
+  linearScale: 1
+  smoothDst: 1
+  smoothIts: 50
+  axisInfo: {fileID: 543726198}
+  showScaleLines: 0
+  scaleLinesCol: {r: 0.1509434, g: 0.1509434, b: 0.1509434, a: 1}
+  scaleToolLineCol: {r: 1, g: 0.3529412, b: 0.3529412, a: 1}
+  timeValuePairs:
+  - {x: 0, y: 0}
+  - {x: 0.05112662, y: 0.025381267}
+  - {x: 0.085139826, y: 0.07232693}
+  - {x: 0.121214665, y: 0.16877538}
+  - {x: 0.18099585, y: 0.34644377}
+  - {x: 0.2552068, y: 0.53514904}
+  - {x: 0.35415483, y: 0.72462344}
+  - {x: 0.49330035, y: 0.9019457}
+  - {x: 0.60049415, y: 0.96537304}
+  - {x: 0.7210868, y: 0.9835118}
+  - {x: 0.8688935, y: 0.99492383}
+  - {x: 1, y: 1}
+  - {x: 1, y: 1}
+  - {x: 1, y: 1}
+  - {x: 1, y: 1}
+  currentDataInLinearScale: 1
+  showTestLine: 0
+--- !u!4 &543726200
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 543726197}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 12.6, y: -2.48, z: 0}
+  m_LocalScale: {x: 16, y: 8.5, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 124828905}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &770940581
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 770940582}
+  - component: {fileID: 770940584}
+  - component: {fileID: 770940583}
+  m_Layer: 0
+  m_Name: Curve (attack)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &770940582
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 770940581}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -9.26, y: 0, z: 0}
+  m_LocalScale: {x: 8.5, y: 9.25, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 23916954}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &770940583
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 770940581}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2eacafbf3d2896b4495f28de45ed1ad6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Audio.Tools.AxesWidgetAddon
+  drawInputField: 1
+  minMaxX: {x: 0, y: 30}
+  minMaxY: {x: 0, y: 1}
+  showAxisLabelsX: 0
+  showAxisLabelsY: 0
+  xAxisLabelTargetSpacing: 0.75
+  yAxisLabelTargetSpacing: 0
+  labelCol: {r: 1, g: 1, b: 1, a: 1}
+  padFactor: 1
+  parentWidget: {fileID: 770940584}
+--- !u!114 &770940584
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 770940581}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cae25643358634045a3e9c05a00741c2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Audio.Display.CurveWidget
+  themeCol: 0
+  title: ATTACK
+  titleOffset: {x: 0.12, y: 0.315}
+  showAmplitudeCurveInDecibelMode: 0
+  displaySettings:
+    displayResolution: 128
+    anchorSize: 0.11
+    inputFieldSize: {x: 0, y: 0.02}
+    inputFieldTextPad: 0.15
+  useRemapCurve: 0
+  mappingCurve: {fileID: 0}
+  valueDragSensitivity: 50
+  curve:
+    anchorA: {x: 0, y: 0}
+    controlA: {x: 0, y: 0.72635984}
+    controlB: {x: 0.3826357, y: 1}
+    anchorB: {x: 1, y: 1}
+  sustain: 0
+  axisInfo: {fileID: 770940583}
+--- !u!1 &784883633
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 784883635}
+  - component: {fileID: 784883634}
+  m_Layer: 0
+  m_Name: 'Overtone Creator [C4]'
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &784883634
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 784883633}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd07843bb7abb3d48b5036d30a2eb1fb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::OvertoneCreator
+  themeCol: 4
+  title: C4
+  titleOffset: {x: 0.12, y: 3.86}
+  overtoneCount: 16
+  linearViewMode: 0
+  multiplier: 1
+  spacing: 0.035
+  overtoneTextOffset: -0.48
+  labelBgSize: {x: 0.94, y: 0.52}
+  waveDisplay:
+    offsetY: 0.24
+    height: 3.25
+    thickness: 0.01
+    thickness_shapes: 0.05
+    resolution: 512
+  values:
+  - 1
+  - 0.3
+  - 0.113
+  - 0.09
+  - 0.043
+  - 0.09
+  - 0.062
+  - 0.011
+  - 0.008
+  - 0.002
+  - 0.002
+  - 0.002
+  - 0.001
+  - 0.0005
+  - 0.001
+  - 0.0005
+  valuesScaled:
+  - 0.57937425
+  - 0.17381229
+  - 0.06546929
+  - 0.052143686
+  - 0.024913093
+  - 0.052143686
+  - 0.035921205
+  - 0.0063731167
+  - 0.004634994
+  - 0.0011587485
+  - 0.0011587485
+  - 0.0011587485
+  - 0.00057937426
+  - 0.00028968713
+  - 0.00057937426
+  - 0.00028968713
+  modifiedThisFrame: 1
+--- !u!4 &784883635
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 784883633}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -9.08, y: -6.6800003, z: 0}
+  m_LocalScale: {x: 17, y: 5, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 145680674}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &809327072
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 809327073}
+  - component: {fileID: 809327075}
+  m_Layer: 0
+  m_Name: 'Overtone Creator [C4]'
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &809327073
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 809327072}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -9.08, y: -6.6800003, z: 0}
+  m_LocalScale: {x: 17, y: 5, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 389287074}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &809327075
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 809327072}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd07843bb7abb3d48b5036d30a2eb1fb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::OvertoneCreator
+  themeCol: 4
+  title: C4
+  titleOffset: {x: 0.12, y: 3.86}
+  overtoneCount: 16
+  linearViewMode: 0
+  multiplier: 1
+  spacing: 0.035
+  overtoneTextOffset: -0.48
+  labelBgSize: {x: 0.94, y: 0.52}
+  waveDisplay:
+    offsetY: 0.24
+    height: 3.25
+    thickness: 0.01
+    thickness_shapes: 0.05
+    resolution: 512
+  values:
+  - 1
+  - 0.00720767
+  - 0.02
+  - 0.26275754
+  - 0.01
+  - 0
+  - 0.004
+  - 0.00031501433
+  - 0.0007910264
+  - 0.1964157
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  valuesScaled:
+  - 0.6660065
+  - 0.0048003546
+  - 0.013320129
+  - 0.17499822
+  - 0.0066600647
+  - 0
+  - 0.002664026
+  - 0.00020980158
+  - 0.0005268287
+  - 0.13081412
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  modifiedThisFrame: 0
+--- !u!1 &896149432
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 896149434}
+  - component: {fileID: 896149433}
+  - component: {fileID: 896149435}
+  m_Layer: 0
+  m_Name: Curve (release)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &896149433
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 896149432}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cae25643358634045a3e9c05a00741c2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Audio.Display.CurveWidget
+  themeCol: 3
+  title: RELEASE
+  titleOffset: {x: 0.12, y: 0.315}
+  showAmplitudeCurveInDecibelMode: 0
+  displaySettings:
+    displayResolution: 128
+    anchorSize: 0.11
+    inputFieldSize: {x: 0, y: 0.02}
+    inputFieldTextPad: 0.15
+  useRemapCurve: 0
+  mappingCurve: {fileID: 0}
+  valueDragSensitivity: 50
+  curve:
+    anchorA: {x: 0, y: 1}
+    controlA: {x: 0, y: 0.4151438}
+    controlB: {x: 0.31488264, y: 0}
+    anchorB: {x: 1, y: 0}
+  sustain: 0
+  axisInfo: {fileID: 896149435}
+--- !u!4 &896149434
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 896149432}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 9.26, y: 0, z: 0}
+  m_LocalScale: {x: 8.5, y: 9.25, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 288399993}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &896149435
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 896149432}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2eacafbf3d2896b4495f28de45ed1ad6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Audio.Tools.AxesWidgetAddon
+  drawInputField: 1
+  minMaxX: {x: 0, y: 250}
+  minMaxY: {x: 0, y: 1}
+  showAxisLabelsX: 0
+  showAxisLabelsY: 0
+  xAxisLabelTargetSpacing: 0.75
+  yAxisLabelTargetSpacing: 0
+  labelCol: {r: 1, g: 1, b: 1, a: 1}
+  padFactor: 1
+  parentWidget: {fileID: 896149433}
+--- !u!1 &983439360
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 983439362}
+  - component: {fileID: 983439361}
+  m_Layer: 0
+  m_Name: Curves ADR
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &983439361
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 983439360}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 44d42d685d395b149aa362feba325a28, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::EnvelopeCreatorADR
+  Sustain: 0
+  curveAttack: {fileID: 481622650}
+  curveDecay: {fileID: 1598376602}
+  curveRelease: {fileID: 25332012}
+  useDecay: 1
+  spacingX: 9.26
+  spaceVertical: 0
+--- !u!4 &983439362
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 983439360}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -7.6, y: -4.5, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 481622648}
+  - {fileID: 1598376600}
+  - {fileID: 25332014}
+  m_Father: {fileID: 1565266039}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1124268873
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1124268875}
+  - component: {fileID: 1124268874}
+  - component: {fileID: 1124268876}
+  m_Layer: 0
+  m_Name: Curve (attack)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1124268874
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1124268873}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cae25643358634045a3e9c05a00741c2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Audio.Display.CurveWidget
+  themeCol: 0
+  title: ATTACK
+  titleOffset: {x: 0.12, y: 0.315}
+  showAmplitudeCurveInDecibelMode: 0
+  displaySettings:
+    displayResolution: 128
+    anchorSize: 0.11
+    inputFieldSize: {x: 0, y: 0.02}
+    inputFieldTextPad: 0.15
+  useRemapCurve: 0
+  mappingCurve: {fileID: 0}
+  valueDragSensitivity: 50
+  curve:
+    anchorA: {x: 0, y: 0}
+    controlA: {x: 0, y: 0.8931421}
+    controlB: {x: 0.5836376, y: 1}
+    anchorB: {x: 1, y: 1}
+  sustain: 0
+  axisInfo: {fileID: 1124268876}
+--- !u!4 &1124268875
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1124268873}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -9.26, y: 0, z: 0}
+  m_LocalScale: {x: 8.5, y: 9.25, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 288399993}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1124268876
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1124268873}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2eacafbf3d2896b4495f28de45ed1ad6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Audio.Tools.AxesWidgetAddon
+  drawInputField: 1
+  minMaxX: {x: 0, y: 10}
+  minMaxY: {x: 0, y: 1}
+  showAxisLabelsX: 0
+  showAxisLabelsY: 0
+  xAxisLabelTargetSpacing: 0.75
+  yAxisLabelTargetSpacing: 0
+  labelCol: {r: 1, g: 1, b: 1, a: 1}
+  padFactor: 1
+  parentWidget: {fileID: 1124268874}
+--- !u!1 &1140478881
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1140478883}
+  - component: {fileID: 1140478882}
+  m_Layer: 0
+  m_Name: MidiListener
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1140478882
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1140478881}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 55b2f9484f4c2cc42a0ec1f3e08b8777, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::MidiListener
+  info_devices: []
+--- !u!4 &1140478883
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1140478881}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1157872013
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1157872014}
+  - component: {fileID: 1157872016}
+  m_Layer: 0
+  m_Name: 'Overtone Creator [C3]'
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1157872014
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1157872013}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 8.5, y: 3.4799995, z: 0}
+  m_LocalScale: {x: 17, y: 5, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 389287074}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1157872016
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1157872013}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd07843bb7abb3d48b5036d30a2eb1fb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::OvertoneCreator
+  themeCol: 4
+  title: C3
+  titleOffset: {x: 0.12, y: 3.86}
+  overtoneCount: 16
+  linearViewMode: 0
+  multiplier: 1.2
+  spacing: 0.035
+  overtoneTextOffset: -0.48
+  labelBgSize: {x: 0.94, y: 0.52}
+  waveDisplay:
+    offsetY: 0.24
+    height: 3.25
+    thickness: 0.01
+    thickness_shapes: 0.05
+    resolution: 512
+  values:
+  - 1
+  - 0.03
+  - 0.1
+  - 0.44
+  - 0.075
+  - 0.04
+  - 0.03
+  - 0.02
+  - 0.1
+  - 0.84
+  - 0.28
+  - 0.05
+  - 0.06
+  - 0.008
+  - 0.006
+  - 0.004
+  valuesScaled:
+  - 0.38923132
+  - 0.011676939
+  - 0.038923133
+  - 0.17126179
+  - 0.02919235
+  - 0.015569253
+  - 0.011676939
+  - 0.0077846264
+  - 0.038923133
+  - 0.32695428
+  - 0.108984776
+  - 0.019461567
+  - 0.023353878
+  - 0.0031138507
+  - 0.002335388
+  - 0.0015569254
+  modifiedThisFrame: 0
+--- !u!1 &1159698679
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1159698682}
+  - component: {fileID: 1159698681}
+  m_Layer: 0
+  m_Name: 'Overtone Creator [C2]'
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1159698681
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1159698679}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd07843bb7abb3d48b5036d30a2eb1fb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::OvertoneCreator
+  themeCol: 4
+  title: C2
+  titleOffset: {x: 0.12, y: 3.86}
+  overtoneCount: 16
+  linearViewMode: 0
+  multiplier: 1.5
+  spacing: 0.035
+  overtoneTextOffset: -0.48
+  labelBgSize: {x: 0.94, y: 0.52}
+  waveDisplay:
+    offsetY: 0.24
+    height: 3.25
+    thickness: 0.01
+    thickness_shapes: 0.05
+    resolution: 512
+  values:
+  - 0.15
+  - 0.2453
+  - 0.9
+  - 0.62
+  - 0.73
+  - 0.87
+  - 1
+  - 0.2
+  - 0.15
+  - 0.23
+  - 0.45
+  - 0.22
+  - 0.92
+  - 0.2
+  - 0.2
+  - 0.15
+  valuesScaled:
+  - 0.031097539
+  - 0.05085484
+  - 0.18658523
+  - 0.1285365
+  - 0.15134136
+  - 0.18036573
+  - 0.20731692
+  - 0.041463386
+  - 0.031097539
+  - 0.047682893
+  - 0.09329262
+  - 0.045609724
+  - 0.19073157
+  - 0.041463386
+  - 0.041463386
+  - 0.031097539
+  modifiedThisFrame: 1
+--- !u!4 &1159698682
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1159698679}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -9.08, y: 3.4799995, z: 0}
+  m_LocalScale: {x: 17, y: 5, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 145680674}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1293723134
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1293723137}
+  - component: {fileID: 1293723135}
+  - component: {fileID: 1293723136}
+  m_Layer: 0
+  m_Name: Line Widget (freq falloff)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1293723135
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1293723134}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a365d9da61e25d74fbaa3fec066d3196, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Audio.Tools.LineWidget
+  themeCol: 5
+  title: FREQUENCY DECAY MULTIPLIER
+  titleOffset: {x: 0, y: 0.33}
+  discreteResolution: 512
+  linearScale: 0
+  smoothDst: 1
+  smoothIts: 50
+  axisInfo: {fileID: 1293723136}
+  showScaleLines: 1
+  scaleLinesCol: {r: 0.11026625, g: 0.061320752, b: 0.24528301, a: 1}
+  scaleToolLineCol: {r: 1, g: 0.3529412, b: 0.3529412, a: 1}
+  timeValuePairs:
+  - {x: 0, y: 0}
+  - {x: 0.06606345, y: 0.3312188}
+  - {x: 0.15791407, y: 0.6199046}
+  - {x: 0.28029957, y: 0.81955624}
+  - {x: 0.41625598, y: 0.92455405}
+  - {x: 0.58029944, y: 0.96667314}
+  - {x: 0.85074985, y: 0.9904533}
+  - {x: 1, y: 1}
+  - {x: 1, y: 1}
+  - {x: 1, y: 1}
+  - {x: 1, y: 1}
+  currentDataInLinearScale: 0
+  showTestLine: 0
+--- !u!114 &1293723136
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1293723134}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2eacafbf3d2896b4495f28de45ed1ad6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::AxesWidgetAddon
+  drawInputField: 0
+  minMaxX: {x: 0, y: 8000}
+  minMaxY: {x: 1, y: 12}
+  showAxisLabelsX: 1
+  showAxisLabelsY: 1
+  xAxisLabelTargetSpacing: 1.84
+  yAxisLabelTargetSpacing: 1.38
+  labelCol: {r: 1, g: 1, b: 1, a: 1}
+  padFactor: 1.5
+  parentWidget: {fileID: 1293723135}
+--- !u!4 &1293723137
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1293723134}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 12.8, y: -2.48, z: 0}
+  m_LocalScale: {x: 15.7, y: 8.5, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 395751527}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1552269724
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1552269727}
+  - component: {fileID: 1552269726}
+  m_Layer: 0
+  m_Name: 'Overtone Creator [C3]'
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1552269726
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1552269724}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd07843bb7abb3d48b5036d30a2eb1fb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::OvertoneCreator
+  themeCol: 4
+  title: C3
+  titleOffset: {x: 0.12, y: 3.86}
+  overtoneCount: 16
+  linearViewMode: 0
+  multiplier: 1.2
+  spacing: 0.035
+  overtoneTextOffset: -0.48
+  labelBgSize: {x: 0.94, y: 0.52}
+  waveDisplay:
+    offsetY: 0.24
+    height: 3.25
+    thickness: 0.01
+    thickness_shapes: 0.05
+    resolution: 512
+  values:
+  - 0.1
+  - 1
+  - 0.43
+  - 0.1
+  - 0.34
+  - 0.23
+  - 0.7
+  - 0.08
+  - 0.12
+  - 0.23
+  - 0.11
+  - 0.17
+  - 0.06
+  - 0.23
+  - 0.18
+  - 0.04
+  valuesScaled:
+  - 0.029126216
+  - 0.29126215
+  - 0.12524274
+  - 0.029126216
+  - 0.09902914
+  - 0.06699029
+  - 0.20388351
+  - 0.023300972
+  - 0.03495146
+  - 0.06699029
+  - 0.032038838
+  - 0.04951457
+  - 0.01747573
+  - 0.06699029
+  - 0.052427188
+  - 0.011650486
+  modifiedThisFrame: 1
+--- !u!4 &1552269727
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1552269724}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 8.5, y: 3.4799995, z: 0}
+  m_LocalScale: {x: 17, y: 5, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 145680674}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1565266036
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1565266039}
+  - component: {fileID: 1565266038}
+  - component: {fileID: 1565266037}
+  m_Layer: 0
+  m_Name: Synth - Simple
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1565266037
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1565266036}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9f6ce6db18c0aab40ae8368d331398b9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Audio.Synth.SynthVid
+  autoReleaseNotes: 0
+  compressor: {fileID: 88121429}
+  envelopeCreator: {fileID: 983439361}
+  synthKeyFrames:
+  - name: C4
+    note:
+      noteLetter: 0
+      isSharp: 0
+      octaveNumber: 4
+    overtoneCreator: {fileID: 1681013982}
+    decayDurationFactor: 1
+    harmonicAmplitudes:
+    - 0.03703704
+    - 0.07407408
+    - 0.22222224
+    - 0.15308644
+    - 0.18024692
+    - 0.21481483
+    - 0.24691358
+    - 0.04938272
+    - 0.03703704
+    - 0.05679013
+    - 0.11111112
+    - 0.05432099
+    - 0.22716051
+    - 0.04938272
+    - 0.04938272
+    - 0.03703704
+    harmonicAmplitudes_Display:
+    - 0.15
+    - 0.3
+    - 0.9
+    - 0.62
+    - 0.73
+    - 0.87
+    - 1
+    - 0.2
+    - 0.15
+    - 0.23
+    - 0.45
+    - 0.22
+    - 0.92
+    - 0.2
+    - 0.2
+    - 0.15
+  decayRateCurve: {fileID: 0}
+  info_numActiveNotes: 0
+--- !u!114 &1565266038
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1565266036}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 14dddce4380ec224e9b4e1ef15f2f229, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Music.Synth.Controller.SynthWaveController
+  audioSystem: {fileID: 500291275}
+  synth: {fileID: 1565266037}
+  piano: {fileID: 2047246413}
+--- !u!4 &1565266039
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1565266036}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 2, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1681013983}
+  - {fileID: 88121430}
+  - {fileID: 983439362}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1590348688
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1590348690}
+  - component: {fileID: 1590348689}
+  m_Layer: 0
+  m_Name: Compressor
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1590348689
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1590348688}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 05235dc92c5fcb94ab5b78709f279281, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CompressorTest
+  themeCol: 4
+  title: COMPRESSOR
+  titleOffset: {x: 0.09, y: 0.33}
+  thresholdLineCol: {r: 0.59607846, g: 0.19607843, b: 0.8784314, a: 1}
+  smoothLineCol: {r: 0.26666668, g: 0.08235294, b: 0.41568628, a: 1}
+  maxInputCol: {r: 1, g: 1, b: 1, a: 1}
+  labelCol: {r: 1, g: 1, b: 1, a: 1}
+  reduceCol: {r: 0.9607843, g: 0.21176471, b: 0.34509805, a: 1}
+  dbMin: -60
+  dbMax: 0
+  threshold: -12.97596
+  smoothWidth: 17.9
+  ratio: 3.4
+  attackSpeed: 100
+  decaySpeed: 100
+  displayResolution: 256
+  info_compressThresholdAmp: 0.2244926
+  targetReductionDB: 0.00000013399547
+  smoothedReductionDB: 0.0000021980197
+--- !u!4 &1590348690
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1590348688}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 26.41, y: -2.41, z: 0}
+  m_LocalScale: {x: 8.3, y: 8.3, z: 0.92222226}
+  m_ConstrainProportionsScale: 1
+  m_Children: []
+  m_Father: {fileID: 395751527}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1591899734
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1591899737}
+  - component: {fileID: 1591899736}
+  - component: {fileID: 1591899735}
+  m_Layer: 0
+  m_Name: Line Widget (decay)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1591899735
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1591899734}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2eacafbf3d2896b4495f28de45ed1ad6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::AxesWidgetAddon
+  drawInputField: 1
+  minMaxX: {x: 0, y: 50000}
+  minMaxY: {x: 0, y: 1}
+  showAxisLabelsX: 0
+  showAxisLabelsY: 0
+  xAxisLabelTargetSpacing: 2
+  yAxisLabelTargetSpacing: 0
+  labelCol: {r: 0.44313726, g: 0.31764707, b: 0.08235294, a: 1}
+  padFactor: 1
+  parentWidget: {fileID: 1591899736}
+--- !u!114 &1591899736
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1591899734}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a365d9da61e25d74fbaa3fec066d3196, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Audio.Tools.LineWidget
+  themeCol: 1
+  title: DECAY
+  titleOffset: {x: 0, y: 0.33}
+  discreteResolution: 512
+  linearScale: 0
+  smoothDst: 1
+  smoothIts: 5
+  axisInfo: {fileID: 1591899735}
+  showScaleLines: 1
+  scaleLinesCol: {r: 0.09433961, g: 0.09433961, b: 0.09433961, a: 1}
+  scaleToolLineCol: {r: 0, g: 0, b: 0, a: 0}
+  timeValuePairs:
+  - {x: 0, y: 1}
+  - {x: 0.002667084, y: 0.9739781}
+  - {x: 0.003266099, y: 0.945315}
+  - {x: 0.0070023444, y: 0.6522466}
+  - {x: 0.013800452, y: 0.36695272}
+  - {x: 0.019330252, y: 0.29565746}
+  - {x: 0.031273782, y: 0.23006648}
+  - {x: 0.056442976, y: 0.17389917}
+  - {x: 0.10268438, y: 0.13136011}
+  - {x: 0.17998654, y: 0.100916445}
+  - {x: 0.32953078, y: 0.071991205}
+  - {x: 0.5419011, y: 0.041155398}
+  - {x: 0.80252093, y: 0.017371165}
+  - {x: 1, y: 0}
+  - {x: 1, y: 0}
+  - {x: 1, y: 0}
+  currentDataInLinearScale: 0
+  showTestLine: 0
+--- !u!4 &1591899737
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1591899734}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 8.5, y: 9.25, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 288399993}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1598376599
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1598376600}
+  - component: {fileID: 1598376602}
+  - component: {fileID: 1598376601}
+  m_Layer: 0
+  m_Name: Curve (decay)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1598376600
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1598376599}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 8.5, y: 9.25, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 983439362}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1598376601
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1598376599}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2eacafbf3d2896b4495f28de45ed1ad6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Audio.Tools.AxesWidgetAddon
+  drawInputField: 1
+  minMaxX: {x: 0, y: 1500}
+  minMaxY: {x: 0, y: 1}
+  showAxisLabelsX: 0
+  showAxisLabelsY: 0
+  xAxisLabelTargetSpacing: 0.75
+  yAxisLabelTargetSpacing: 0
+  labelCol: {r: 1, g: 1, b: 1, a: 1}
+  padFactor: 1
+  parentWidget: {fileID: 1598376602}
+--- !u!114 &1598376602
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1598376599}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cae25643358634045a3e9c05a00741c2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Audio.Display.CurveWidget
+  themeCol: 1
+  title: DECAY
+  titleOffset: {x: 0.12, y: 0.315}
+  showAmplitudeCurveInDecibelMode: 1
+  displaySettings:
+    displayResolution: 128
+    anchorSize: 0.11
+    inputFieldSize: {x: 0, y: 0.02}
+    inputFieldTextPad: 0.15
+  useRemapCurve: 0
+  mappingCurve: {fileID: 0}
+  valueDragSensitivity: 50
+  curve:
+    anchorA: {x: 0, y: 1}
+    controlA: {x: 0.010002375, y: 0}
+    controlB: {x: 0.030007314, y: 0}
+    anchorB: {x: 1, y: 0}
+  sustain: 0
+  axisInfo: {fileID: 1598376601}
+--- !u!1 &1615991898
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1615991901}
+  - component: {fileID: 1615991899}
+  m_Layer: 0
+  m_Name: 'Overtone Creator [C6]'
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1615991899
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1615991898}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd07843bb7abb3d48b5036d30a2eb1fb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::OvertoneCreator
+  themeCol: 4
+  title: C6
+  titleOffset: {x: 0.12, y: 3.86}
+  overtoneCount: 16
+  linearViewMode: 0
+  multiplier: 0.8
+  spacing: 0.035
+  overtoneTextOffset: -0.48
+  labelBgSize: {x: 0.94, y: 0.52}
+  waveDisplay:
+    offsetY: 0.24
+    height: 3.25
+    thickness: 0.01
+    thickness_shapes: 0.05
+    resolution: 512
+  values:
+  - 1
+  - 0.0044932445
+  - 0.00052033016
+  - 0
+  - 0.024172135
+  - 0.0039704554
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  valuesScaled:
+  - 0.77432626
+  - 0.0034792372
+  - 0.00040290528
+  - 0
+  - 0.018717118
+  - 0.0030744278
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  modifiedThisFrame: 0
+--- !u!4 &1615991901
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1615991898}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 8.5, y: -6.6499996, z: 0}
+  m_LocalScale: {x: 17, y: 5, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 389287074}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1681013981
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1681013983}
+  - component: {fileID: 1681013982}
+  m_Layer: 0
+  m_Name: Harmonics
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1681013982
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1681013981}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd07843bb7abb3d48b5036d30a2eb1fb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::OvertoneCreator
+  themeCol: 2
+  title: C4
+  titleOffset: {x: 0.12, y: 3.86}
+  overtoneCount: 16
+  linearViewMode: 0
+  multiplier: 1
+  spacing: 0.035
+  overtoneTextOffset: -0.48
+  labelBgSize: {x: 0.94, y: 0.52}
+  waveDisplay:
+    offsetY: 0.24
+    height: 3.25
+    thickness: 0.01
+    thickness_shapes: 0.05
+    resolution: 512
+  values:
+  - 1
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  valuesScaled:
+  - 1
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  modifiedThisFrame: 0
+--- !u!4 &1681013983
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1681013981}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 7.05, z: 0}
+  m_LocalScale: {x: 30, y: 8, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1565266039}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1689846107
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1689846108}
+  - component: {fileID: 1689846110}
+  - component: {fileID: 1689846109}
+  m_Layer: 0
+  m_Name: Curve (release)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1689846108
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1689846107}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 9.26, y: 0, z: 0}
+  m_LocalScale: {x: 8.5, y: 9.25, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 23916954}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1689846109
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1689846107}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2eacafbf3d2896b4495f28de45ed1ad6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Audio.Tools.AxesWidgetAddon
+  drawInputField: 1
+  minMaxX: {x: 0, y: 3000}
+  minMaxY: {x: 0, y: 1}
+  showAxisLabelsX: 0
+  showAxisLabelsY: 0
+  xAxisLabelTargetSpacing: 0.75
+  yAxisLabelTargetSpacing: 0
+  labelCol: {r: 1, g: 1, b: 1, a: 1}
+  padFactor: 1
+  parentWidget: {fileID: 1689846110}
+--- !u!114 &1689846110
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1689846107}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cae25643358634045a3e9c05a00741c2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Audio.Display.CurveWidget
+  themeCol: 3
+  title: RELEASE
+  titleOffset: {x: 0.12, y: 0.315}
+  showAmplitudeCurveInDecibelMode: 0
+  displaySettings:
+    displayResolution: 128
+    anchorSize: 0.11
+    inputFieldSize: {x: 0, y: 0.02}
+    inputFieldTextPad: 0.15
+  useRemapCurve: 0
+  mappingCurve: {fileID: 0}
+  valueDragSensitivity: 50
+  curve:
+    anchorA: {x: 0, y: 1}
+    controlA: {x: 0, y: 0.09946513}
+    controlB: {x: 0.16163063, y: 0}
+    anchorB: {x: 1, y: 0}
+  sustain: 0
+  axisInfo: {fileID: 1689846109}
+--- !u!1 &1731470553
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1731470554}
+  - component: {fileID: 1731470556}
+  m_Layer: 0
+  m_Name: 'Overtone Creator [C2]'
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1731470554
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1731470553}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -9.08, y: 3.4799995, z: 0}
+  m_LocalScale: {x: 17, y: 5, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 389287074}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1731470556
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1731470553}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd07843bb7abb3d48b5036d30a2eb1fb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::OvertoneCreator
+  themeCol: 4
+  title: C2
+  titleOffset: {x: 0.12, y: 3.86}
+  overtoneCount: 16
+  linearViewMode: 0
+  multiplier: 1.5
+  spacing: 0.035
+  overtoneTextOffset: -0.48
+  labelBgSize: {x: 0.94, y: 0.52}
+  waveDisplay:
+    offsetY: 0.24
+    height: 3.25
+    thickness: 0.01
+    thickness_shapes: 0.05
+    resolution: 512
+  values:
+  - 1
+  - 0.016
+  - 0.016
+  - 0.05
+  - 0.04
+  - 0.05
+  - 0.03
+  - 0.03
+  - 0.05
+  - 0.43
+  - 0.1
+  - 0.4
+  - 0.1
+  - 0.07
+  - 0.05
+  - 0.05
+  valuesScaled:
+  - 0.6043514
+  - 0.009669623
+  - 0.009669623
+  - 0.030217571
+  - 0.024174057
+  - 0.030217571
+  - 0.018130543
+  - 0.018130543
+  - 0.030217571
+  - 0.25987113
+  - 0.060435142
+  - 0.24174057
+  - 0.060435142
+  - 0.042304598
+  - 0.030217571
+  - 0.030217571
+  modifiedThisFrame: 0
+--- !u!1 &1861160371
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1861160374}
+  - component: {fileID: 1861160373}
+  m_Layer: 0
+  m_Name: 'Overtone Creator [C6]'
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1861160373
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1861160371}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd07843bb7abb3d48b5036d30a2eb1fb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::OvertoneCreator
+  themeCol: 4
+  title: C6
+  titleOffset: {x: 0.12, y: 3.86}
+  overtoneCount: 16
+  linearViewMode: 0
+  multiplier: 0.8
+  spacing: 0.035
+  overtoneTextOffset: -0.48
+  labelBgSize: {x: 0.94, y: 0.52}
+  waveDisplay:
+    offsetY: 0.24
+    height: 3.25
+    thickness: 0.01
+    thickness_shapes: 0.05
+    resolution: 512
+  values:
+  - 1
+  - 0.1
+  - 0.012
+  - 0.007
+  - 0.002
+  - 0.001
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  valuesScaled:
+  - 0.7130125
+  - 0.07130125
+  - 0.00855615
+  - 0.0049910876
+  - 0.0014260251
+  - 0.00071301253
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  modifiedThisFrame: 1
+--- !u!4 &1861160374
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1861160371}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 8.5, y: -6.6499996, z: 0}
+  m_LocalScale: {x: 17, y: 5, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 145680674}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2047246411
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2047246412}
+  - component: {fileID: 2047246413}
+  m_Layer: 0
+  m_Name: Piano Keyboard
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2047246412
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2047246411}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: -13.01, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2047246413
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2047246411}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 826f418d1fce8dd4bbea4b8d5f306637, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startNoteLetter: 0
+  startNoteOctave: 2
+  keyCount: 61
+  inputStartNote:
+    noteLetter: 0
+    isSharp: 0
+    octaveNumber: 4
+  keyboardSize: {x: 62.9, y: 5.66}
+  blackKeyScale: {x: 0.65, y: 0.55}
+  noteSpacing: 0.08
+  sharpOffsetX: 0.04
+  keyColsWhite:
+    normal: {r: 0.9056604, g: 0.8833154, b: 0.8415806, a: 1}
+    hover: {r: 1, g: 1, b: 1, a: 1}
+    hold: {r: 0.62664205, g: 0.3532396, b: 0.9245283, a: 1}
+  keyColsBlack:
+    normal: {r: 0.12156863, g: 0.12156863, b: 0.12156863, a: 1}
+    hover: {r: 0.14150941, g: 0.14150941, b: 0.14150941, a: 1}
+    hold: {r: 0.3449156, g: 0.10537558, b: 0.6037736, a: 1}
+  outlineThickness: 0.02
+  keyEndBandHeight: 0.18
+  keyEndWidthFrac: 0.96
+  colBlackTip: {r: 0.050980397, g: 0.050980397, b: 0.050980397, a: 1}
+  colWhiteTip: {r: 0.8584906, g: 0.8266009, b: 0.77345145, a: 1}
+  colOutline: {r: 0, g: 0, b: 0, a: 1}
+  colBg: {r: 0, g: 0, b: 0, a: 1}
+--- !u!1 &2074501590
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2074501592}
+  - component: {fileID: 2074501591}
+  m_Layer: 0
+  m_Name: Compressor
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &2074501591
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2074501590}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 05235dc92c5fcb94ab5b78709f279281, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CompressorTest
+  themeCol: 4
+  title: COMPRESSOR
+  titleOffset: {x: 0.09, y: 0.33}
+  thresholdLineCol: {r: 0.59607846, g: 0.19607843, b: 0.8784314, a: 1}
+  smoothLineCol: {r: 0.26666668, g: 0.08235294, b: 0.41568628, a: 1}
+  maxInputCol: {r: 1, g: 1, b: 1, a: 1}
+  labelCol: {r: 1, g: 1, b: 1, a: 1}
+  reduceCol: {r: 0.9622642, g: 0.21333215, b: 0.34328404, a: 1}
+  dbMin: -60
+  dbMax: 0
+  threshold: -12.975955
+  smoothWidth: 17.9
+  ratio: 3.4
+  attackSpeed: 100
+  decaySpeed: 100
+  displayResolution: 256
+  info_compressThresholdAmp: 0.22449271
+  targetReductionDB: 0
+  smoothedReductionDB: 0
+--- !u!4 &2074501592
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2074501590}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 26.41, y: -2.41, z: 0}
+  m_LocalScale: {x: 8.3, y: 8.3, z: 0.92222226}
+  m_ConstrainProportionsScale: 1
+  m_Children: []
+  m_Father: {fileID: 124828905}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2089335473
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2089335475}
+  - component: {fileID: 2089335474}
+  m_Layer: 0
+  m_Name: UI Theme
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &2089335474
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2089335473}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a8855af915ac6344a9dfd616e93196d8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Music.Display.DisplaySettings
+  themeSettings:
+    Font: 2
+    FontSize: 0.375
+    Panel: {r: 0, g: 0.0754717, b: 0.0042441566, a: 1}
+    PanelOutline: {r: 0, g: 0.16037738, b: 0.030208718, a: 1}
+    PanelOutlineThickness: 0.015
+    Base: {r: 0.21698111, g: 0.21698111, b: 0.21698111, a: 1}
+    AccentBright: {r: 0.8867924, g: 0.8867924, b: 0.8867924, a: 1}
+    AccentDark: {r: 0.21124065, g: 0.41791308, b: 0.9528302, a: 1}
+    Inactive: {r: 0.38679248, g: 0.38679248, b: 0.38679248, a: 1}
+  pointRadius: 0.1
+  pointOutlineSize: 0.025
+  pointSelectPad: 0.01
+  lineThickness: 0.0125
+  textPadFactor: 0.57
+  axisLabelCol: {r: 1, g: 1, b: 1, a: 0.3764706}
+  curveWidgetRed:
+    panelCol: {r: 0.11320752, g: 0.01787487, b: 0, a: 1}
+    panelBorderCol: {r: 0.24528301, g: 0.104505606, b: 0.063634746, a: 1}
+    colMain: {r: 1, g: 0.3042453, b: 0.2216981, a: 1}
+    colMainHighlight: {r: 1, g: 0.3970126, b: 0.3254717, a: 1}
+    amplitudeCurveCol: {r: 0.31132078, g: 0.099444106, b: 0.057271283, a: 1}
+  curveWidgetYellow:
+    panelCol: {r: 0.09433961, g: 0.051825173, b: 0.0022249904, a: 1}
+    panelBorderCol: {r: 0.21698111, g: 0.13822311, b: 0.041963324, a: 1}
+    colMain: {r: 1, g: 0.8040662, b: 0.2783019, a: 1}
+    colMainHighlight: {r: 1, g: 0.87823015, b: 0.5518868, a: 1}
+    amplitudeCurveCol: {r: 0.3490566, g: 0.20259537, b: 0, a: 1}
+  curveWidgetGreen:
+    panelCol: {r: 0.009735943, g: 0.05490196, b: 0.003921567, a: 1}
+    panelBorderCol: {r: 0.014017441, g: 0.1981132, b: 0.018108469, a: 1}
+    colMain: {r: 0.27509263, g: 0.9528302, b: 0.20225172, a: 1}
+    colMainHighlight: {r: 0.58555514, g: 1, b: 0.5424528, a: 1}
+    amplitudeCurveCol: {r: 0.11372549, g: 0.32156864, b: 0.105882354, a: 1}
+  curveWidgetBlue:
+    panelCol: {r: 0, g: 0.019390333, b: 0.09433961, a: 1}
+    panelBorderCol: {r: 0, g: 0.14334105, b: 0.33962262, a: 1}
+    colMain: {r: 0.2216981, g: 0.82070553, b: 1, a: 1}
+    colMainHighlight: {r: 0.8915094, g: 0.9747351, b: 1, a: 1}
+    amplitudeCurveCol: {r: 0.21727502, g: 0.16078429, b: 0.6901961, a: 1}
+  curveWidgetWhite:
+    panelCol: {r: 0.047169805, g: 0.047169805, b: 0.047169805, a: 1}
+    panelBorderCol: {r: 0.23584908, g: 0.23584908, b: 0.23584908, a: 1}
+    colMain: {r: 0.8301887, g: 0.8301887, b: 0.8301887, a: 1}
+    colMainHighlight: {r: 1, g: 1, b: 1, a: 1}
+    amplitudeCurveCol: {r: 0.11372549, g: 0.32156864, b: 0.105882354, a: 1}
+  curveWidgetPurple:
+    panelCol: {r: 0.04756136, g: 0, b: 0.11372549, a: 1}
+    panelBorderCol: {r: 0.14416972, g: 0.017132433, b: 0.3301887, a: 1}
+    colMain: {r: 0.5661714, g: 0.3066038, b: 1, a: 1}
+    colMainHighlight: {r: 0.6442891, g: 0.514151, b: 1, a: 1}
+    amplitudeCurveCol: {r: 0.21727502, g: 0.16078429, b: 0.6901961, a: 1}
+--- !u!4 &2089335475
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2089335473}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1660057539 &9223372036854775807
+SceneRoots:
+  m_ObjectHideFlags: 0
+  m_Roots:
+  - {fileID: 217207329}
+  - {fileID: 500291277}
+  - {fileID: 1565266039}
+  - {fileID: 395751527}
+  - {fileID: 124828905}
+  - {fileID: 2089335475}
+  - {fileID: 2047246412}
+  - {fileID: 1140478883}

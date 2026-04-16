@@ -145,27 +145,30 @@ MonoBehaviour:
   m_GameObject: {fileID: 270296063}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 72b1033266d0b9841b1aa345ef6c1197, type: 3}
+  m_Script: {fileID: 11500000, guid: ecca9adba98e0d74c9834be976592948, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Music.Display.WaveformVis
-  audioClip: {fileID: 8300000, guid: 8d51bcb82ed9d4b44a6412a5aa53b4b2, type: 3}
-  waveformCol: {r: 0.33234, g: 1, b: 0.1745283, a: 1}
+  audioClip: {fileID: 8300000, guid: 034308cc2c676a843927f8405a130a5f, type: 3}
+  waveformCol: {r: 0, g: 1, b: 0.21920681, a: 1}
   abs: 1
-  yMul: 1
+  yMul: 1.25
   thicknessMul: 1
-  width: 10
-  normalize: 0
-  fontSize: 0.2
-  fontType: 2
-  titleOffset: {x: 0, y: 0.31}
+  thicknessMul2: 19
+  width: 15
+  normalize: 1
+  fontSize: 0.21
+  fontType: 1
+  titleOffset: {x: -0.07, y: 0.21}
   boundsThick: 0.01
-  boundsPadding: {x: 0.05, y: 0.37}
-  boundsCol: {r: 0.9433962, g: 0.9433962, b: 0.9433962, a: 1}
-  boundsColBG: {r: 0.0754717, g: 0.0754717, b: 0.0754717, a: 1}
+  boundsPadding: {x: 0.15, y: 0.28}
+  boundsCol: {r: 0.07843136, g: 0.13081619, b: 0.3882353, a: 1}
+  boundsColBG: {r: 0.076888986, g: 0.062745094, b: 0.30980393, a: 0.25490198}
+  axisLabelsCol: {r: 0.17254902, g: 0.2784314, b: 0.6039216, a: 1}
+  axisLabelTargetSpacingX: 1.78
   playAnimT: 0
-  animOffset: -0.02
-  playAnimScale: 150
-  playAnimFalloff: 100
+  animOffset: -0.1
+  playAnimScale: 136.93
+  playAnimFalloff: 40
 --- !u!4 &270296065
 Transform:
   m_ObjectHideFlags: 0
@@ -191,6 +194,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1343300072}
   - component: {fileID: 1343300071}
+  - component: {fileID: 1343300073}
   m_Layer: 0
   m_Name: Camera
   m_TagString: MainCamera
@@ -264,6 +268,23 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1343300073
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1343300069}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 63ffb9a06eaa8a345aa352115376fa13, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Seb.Helpers.DragCam2D
+  zoomSpeed: 1
+  zoomToMouse: 1
+  zoomRange: {x: 0.0001, y: 1000}
+  zoomInKey: 113
+  zoomOutKey: 119
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

@@ -1,3 +1,4 @@
+#pragma kernel UpdateEditMap
 #pragma kernel UpdatePaintMap
 #pragma kernel Readback;
 
@@ -6,21 +7,40 @@ Texture2D SpectrogramMap;
 SamplerState pointClampSampler;
 
 RWTexture2D<float> PaintMap;
+RWTexture2D<float> EditedSpectrogram;
 RWStructuredBuffer<float> ReadbackBuffer;
 
-uint2 resolution;
+const uint2 resolution;
 
-float frequencyDisplayMin;
-float frequencyDisplayMax;
-float maxFrequencyInSpectrum;
-int paintMode;
+const float frequencyDisplayMin;
+const float frequencyDisplayMax;
+const float maxFrequencyInSpectrum;
+const float maxAmplitudeInSignal;
+const float duration;
+const bool normalizeAmplitude;
+const bool paintToSound;
 
-float2 RemapUV(float2 uv)
+// ---- Edit kernel params ----
+struct SelectionBox
+{
+    float2 timeFreqMin;
+    float2 timeFreqMax;
+    int showInside;
+};
+
+const bool useDecibelThreshold;
+const float decibelThreshold;
+const int selectionBoxCount;
+StructuredBuffer<SelectionBox> SelectionBoxBuffer;
+
+// ---- Functions ----
+
+float2 RemapUVToDisplay(float2 uv)
 {
     float timeT = uv.x;
     float freqT = uv.y;
     // Remap frequency to display range
-    float frequency = lerp(frequencyDisplayMin, frequencyDisplayMax, freqT);
+    float frequency = freqT * maxFrequencyInSpectrum;
     freqT = frequency / maxFrequencyInSpectrum;
 
     return float2(timeT, freqT); //
@@ -41,13 +61,78 @@ float DecibelsToAmplitude(float db)
     return pow(10, db / 20);
 }
 
+float2 GetUV(uint2 coord)
+{
+    return coord / (resolution - 1.0);
+}
+
+float2 GetTimeFreqFromUV(float2 uv)
+{
+    float time = duration * uv.x;
+    float freq = maxFrequencyInSpectrum * uv.y;
+    return float2(time, freq);
+}
+
+
+bool BoxMinMaxContainsPoint(float2 boxMin, float2 boxMax, float2 p)
+{
+    return p.x >= boxMin.x && p.x <= boxMax.x && p.y >= boxMin.y && p.y <= boxMax.y;
+}
+
+[numthreads(8,8,1)]
+void UpdateEditMap(uint3 id : SV_DispatchThreadID)
+{
+    if (id.x >= resolution.x || id.y >= resolution.y) return;
+
+    float amplitude = SpectrogramMap[id.xy].r;
+    if (useDecibelThreshold)
+    {
+        float db = AmplitudeToDecibels(amplitude);
+        if (normalizeAmplitude) db = AmplitudeToDecibels(amplitude / maxAmplitudeInSignal);
+        
+        if (db < decibelThreshold) amplitude = 0;
+    }
+
+    // Start out considering everything visible of no selection boxes exist (not counting exclusion boxes)
+    bool visibleInSelection = true;
+    
+    for (int boxIndex = 0; boxIndex < selectionBoxCount; boxIndex++)
+    {
+        if (SelectionBoxBuffer[boxIndex].showInside)
+        {
+            visibleInSelection = false;
+            break;
+        }
+    }
+
+    for (int i = 0; i < selectionBoxCount; i++)
+    {
+        SelectionBox box = SelectionBoxBuffer[i];
+        float2 timeFreq = GetTimeFreqFromUV(GetUV(id.xy));
+
+        bool inBox = BoxMinMaxContainsPoint(box.timeFreqMin, box.timeFreqMax, timeFreq);
+
+        if (inBox && box.showInside) visibleInSelection = true;
+
+        if (inBox && !box.showInside)
+        {
+            visibleInSelection = false;
+            break;
+        }
+    }
+
+    if (!visibleInSelection) amplitude = 0;
+
+    EditedSpectrogram[id.xy] = amplitude;
+}
+
 [numthreads(8,8,1)]
 void UpdatePaintMap(uint3 id : SV_DispatchThreadID)
 {
     if (id.x >= resolution.x || id.y >= resolution.y) return;
 
-    float2 fullMapUV = id.xy / (resolution - 1.0);
-   
+    float2 fullMapUV = GetUV(id.xy);
+
     float paint = 0;
     float frequency = fullMapUV.y * maxFrequencyInSpectrum;
 
@@ -56,7 +141,7 @@ void UpdatePaintMap(uint3 id : SV_DispatchThreadID)
         float2 displayUV = float2(fullMapUV.x, Remap01(frequency, frequencyDisplayMin, frequencyDisplayMax));
         paint = PaintInput.SampleLevel(pointClampSampler, displayUV, 0).r;
     }
-    
+
     PaintMap[id.xy] = paint;
 }
 
@@ -65,12 +150,10 @@ void Readback(uint3 id : SV_DispatchThreadID)
 {
     if (id.x >= resolution.x || id.y >= resolution.y) return;
 
-    float amplitude = SpectrogramMap[id.xy].r;
+    float amplitude = EditedSpectrogram[id.xy].r;
     float amplitudePaint = PaintMap[id.xy].r;
 
-    float amplitudeReadback = 0;
-    if (paintMode == 0) amplitudeReadback = max(amplitude, amplitudePaint * 0.3);
-    if (paintMode == 1) amplitudeReadback = amplitudePaint;
+    float amplitudeReadback = paintToSound ? amplitudePaint : amplitude;
 
     uint flatIndex = id.x * resolution.y + id.y;
     ReadbackBuffer[flatIndex] = amplitudeReadback;

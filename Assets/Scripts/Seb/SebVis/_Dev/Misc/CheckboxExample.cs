@@ -21,7 +21,7 @@ namespace Seb.Visualization.UI.Examples
 
 		void DrawToggle()
 		{
-			UIThemeCLASS theme = themeSelector.ActiveTheme;
+			UITheme theme = themeSelector.ActiveTheme;
 
 			UIHandle id = new("toggletest");
 			UI.DrawToggle(id, pos, size, theme.checkboxTheme, anchor);

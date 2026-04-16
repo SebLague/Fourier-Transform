@@ -70,7 +70,7 @@ namespace Seb.Visualization.UI
 
         static Vector2 GetMousePos()
         {
-            return currUIScope.isWorldSpace ? InputHelper.MousePosWorld : InputHelper.MousePos;
+            return currUIScope.isWorldSpace ? InputHelper.MousePosWorld - canvasBottomLeft : InputHelper.MousePos;
         }
 
         static bool MouseInBounds(Vector2 centre, Vector2 size)
@@ -123,7 +123,7 @@ namespace Seb.Visualization.UI
             scope.drawLetterboxes = false;
             scope.aspect = 16 / 9f;
             scope.isWorldSpace = true;
-            Vis.StartLayer(Vector2.zero, 1, false);
+            Vis.StartLayer(pos, 1, false);
 
             return scope;
         }
@@ -383,7 +383,7 @@ namespace Seb.Visualization.UI
 
         public static Vector2 CalculateTextSize(ReadOnlySpan<char> text, float fontSize, FontType font) => Vis.CalculateTextBoundsSize(text, fontSize, font);
 
-        public static InputFieldState InputField(UIHandle id, InputFieldTheme theme, Vector2 pos, Vector2 size, string defaultText, Anchor anchor, float textPad, Func<string, bool> validation = null, bool forceFocus = false)
+        public static InputFieldState InputField(UIHandle id, InputFieldTheme theme, Vector2 pos, Vector2 size, string defaultText, Anchor anchor, float textPad, Func<string, bool> validation = null, bool forceFocus = false, bool handleInput = true)
         {
             InputFieldState state = GetInputFieldState(id);
 
@@ -407,6 +407,11 @@ namespace Seb.Visualization.UI
                     if (mouseInBounds) state.SetCursorIndex(CharIndexBeforeMouse(textCentreLeft_ss.x), InputHelper.ShiftIsHeld);
                 }
 
+                if (InputHelper.IsKeyDownThisFrame(KeyCode.Return))
+                {
+                    state.SetFocus(false);
+                }
+
                 // Hold-drag left mouse to select
                 if (state.focused && InputHelper.IsMouseHeld(MouseButton.Left) && state.isMouseDownInBounds)
                 {
@@ -421,73 +426,9 @@ namespace Seb.Visualization.UI
                 // Draw focus outline and update text
                 if (state.focused)
                 {
-                    const float outlineWidth = 0.05f;
-                    Vis.QuadOutline(ss.centre, ss.size, outlineWidth * scale, theme.focusBorderCol);
-                    foreach (char c in InputHelper.InputStringThisFrame)
-                    {
-                        bool invalidChar = char.IsControl(c) || char.IsSurrogate(c) || char.GetUnicodeCategory(c) == System.Globalization.UnicodeCategory.Format || char.GetUnicodeCategory(c) == System.Globalization.UnicodeCategory.PrivateUse;
-                        if (invalidChar) continue;
-                        state.TryInsertText(c + "", validation);
-                    }
+                    Vis.QuadOutline(ss.centre, ss.size, theme.borderThickness * scale, theme.focusBorderCol);
 
-                    // Paste from clipboard
-                    if (InputHelper.CtrlIsHeld && InputHelper.IsKeyDownThisFrame(KeyCode.V))
-                    {
-                        state.TryInsertText(InputHelper.GetClipboardContents(), validation);
-                    }
-
-                    if (state.text.Length > 0)
-                    {
-                        // Backspace / delete
-                        if (CanTrigger(ref state.backspaceTrigger, KeyCode.Backspace))
-                        {
-                            int charDeleteCount = InputHelper.CtrlIsHeld ? state.text.Length : 1; // delete all if ctrl is held
-                            for (int i = 0; i < charDeleteCount; i++)
-                            {
-                                state.Delete(true, validation);
-                            }
-                        }
-                        else if (CanTrigger(ref state.deleteTrigger, KeyCode.Delete))
-                        {
-                            state.Delete(false, validation);
-                        }
-
-                        // Arrow keys
-                        bool select = InputHelper.ShiftIsHeld;
-                        bool leftArrow = CanTrigger(ref state.arrowKeyTrigger, KeyCode.LeftArrow);
-                        bool rightArrow = CanTrigger(ref state.arrowKeyTrigger, KeyCode.RightArrow);
-                        bool jumpToPrevWordStart = InputHelper.CtrlIsHeld && leftArrow;
-                        bool jumpToNextWordEnd = InputHelper.CtrlIsHeld && rightArrow;
-                        bool jumpToStart = InputHelper.IsKeyDownThisFrame(KeyCode.UpArrow) || InputHelper.IsKeyDownThisFrame(KeyCode.PageUp) || InputHelper.IsKeyDownThisFrame(KeyCode.Home) || (jumpToPrevWordStart && InputHelper.AltIsHeld);
-                        bool jumpToEnd = InputHelper.IsKeyDownThisFrame(KeyCode.DownArrow) || InputHelper.IsKeyDownThisFrame(KeyCode.PageDown) || InputHelper.IsKeyDownThisFrame(KeyCode.End) || (jumpToNextWordEnd && InputHelper.AltIsHeld);
-
-                        if (jumpToStart) state.SetCursorIndex(0, select);
-                        else if (jumpToEnd) state.SetCursorIndex(state.text.Length, select);
-                        else if (jumpToNextWordEnd) state.SetCursorIndex(state.NextWordEndIndex(), select);
-                        else if (jumpToPrevWordStart) state.SetCursorIndex(state.PrevWordIndex(), select);
-                        else if (leftArrow) state.DecrementCursor(select);
-                        else if (rightArrow) state.IncrementCursor(select);
-
-                        bool copyTriggered = InputHelper.CtrlIsHeld && InputHelper.IsKeyDownThisFrame(KeyCode.C);
-                        bool cutTriggered = InputHelper.CtrlIsHeld && InputHelper.IsKeyDownThisFrame(KeyCode.X);
-
-                        // Copy selected text (or all text if nothing selected)
-                        if (copyTriggered || cutTriggered)
-                        {
-                            string copyText = state.text;
-                            if (state.isSelecting) copyText = state.text.AsSpan(state.SelectionMinIndex, state.SelectionMaxIndex - state.SelectionMinIndex).ToString();
-                            InputHelper.CopyToClipboard(copyText);
-
-                            if (cutTriggered)
-                            {
-                                if (state.isSelecting) state.Delete(true, validation);
-                                else state.ClearText();
-                            }
-                        }
-
-                        // Select all
-                        if (InputHelper.CtrlIsHeld && InputHelper.IsKeyDownThisFrame(KeyCode.A)) state.SelectAll();
-                    }
+                    if (handleInput) state.HandleInput();
                 }
 
                 // Draw text
@@ -526,7 +467,7 @@ namespace Seb.Visualization.UI
                         if (state.focused && (int)((Time.time - state.lastInputTime) / blinkDuration) % 2 == 0)
                         {
                             Vector2 caretTextBoundsTest = Vis.CalculateTextBoundsSize("Mj", theme.fontSize, theme.font);
-                            float caretOffset = 1 * 0.075f * (state.cursorBeforeCharIndex == 0 ? -1 : 1);
+                            float caretOffset = theme.fontSize * scale * 0.075f * (state.cursorBeforeCharIndex == 0 ? -1 : 1);
                             Vector2 caretPos_ss = textCentreLeft_ss + Vector2.right * ((boundsSizeUpToCaret.x + caretOffset) * scale);
                             Vector2 caretSize = new(0.125f * theme.fontSize, caretTextBoundsTest.y * 1.2f);
                             Vis.Quad(caretPos_ss, caretSize * scale, theme.textCol);
@@ -538,27 +479,6 @@ namespace Seb.Visualization.UI
             OnFinishedDrawingUIElement(centre, size);
             return state;
 
-            static bool CanTrigger(ref InputFieldState.TriggerState triggerState, KeyCode key)
-            {
-                if (InputHelper.IsKeyDownThisFrame(key)) triggerState.lastManualTime = Time.time;
-
-                if (InputHelper.IsKeyDownThisFrame(key) || (InputHelper.IsKeyHeld(key) && CanAutoTrigger(triggerState)))
-                {
-                    triggerState.lastAutoTiggerTime = Time.time;
-                    return true;
-                }
-
-                return false;
-            }
-
-            static bool CanAutoTrigger(InputFieldState.TriggerState triggerState)
-            {
-                const float autoTriggerStartDelay = 0.5f;
-                const float autoTriggerRepeatDelay = 0.04f;
-                bool initialDelayOver = Time.time - triggerState.lastManualTime > autoTriggerStartDelay;
-                bool canRepeat = Time.time - triggerState.lastAutoTiggerTime > autoTriggerRepeatDelay;
-                return initialDelayOver && canRepeat;
-            }
 
             int CharIndexBeforeMouse(float textLeft)
             {
@@ -1048,9 +968,21 @@ namespace Seb.Visualization.UI
 
         public static Bounds2D UIToScreenSpace(Bounds2D bounds) => new(UIToScreenSpace(bounds.Min), UIToScreenSpace(bounds.Max));
 
-        public static Vector2 UIToScreenSpace(Vector2 point) => canvasBottomLeft + point * scale;
+        public static Vector2 UIToScreenSpace(Vector2 point)
+        {
+            if (currUIScope.isWorldSpace) return point;
+            return canvasBottomLeft + point * scale;
+        }
 
-        static (Vector2 centre, Vector2 size) UIToScreenSpace(Vector2 centre, Vector2 size) => (canvasBottomLeft + centre * scale, size * scale);
+        static (Vector2 centre, Vector2 size) UIToScreenSpace(Vector2 centre, Vector2 size)
+        {
+            if (currUIScope.isWorldSpace)
+            {
+                return (centre, size);
+            }
+
+            return (canvasBottomLeft + centre * scale, size * scale);
+        }
 
         public static float CalculateSizeToFitElements(float boundsSize, float spacing, int numElements)
         {

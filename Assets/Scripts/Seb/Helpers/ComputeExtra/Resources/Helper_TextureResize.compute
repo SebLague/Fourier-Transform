@@ -1,0 +1,15 @@
+#pragma kernel Resize
+
+Texture2D<float4> Source;
+SamplerState linearClampSampler;
+RWTexture2D<float4> Target;
+const uint2 targetSize;
+
+[numthreads(8,8,1)]
+void Resize(uint3 id : SV_DispatchThreadID)
+{
+    if (any(id.xy >= targetSize)) return;
+
+    float2 uv = id.xy / (targetSize - 1.0);
+    Target[id.xy] = Source.SampleLevel(linearClampSampler, uv, 0);
+}

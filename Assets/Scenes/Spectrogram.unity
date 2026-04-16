@@ -119,6 +119,154 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &304563163
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 304563165}
+  - component: {fileID: 304563164}
+  m_Layer: 0
+  m_Name: Spectrogram (view)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &304563164
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 304563163}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 99b7cf1511da124418a52336a5925818, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::VidSpectrogram
+  showHzText: 1
+  clip: {fileID: 8300000, guid: 415c6e1af74c6134489c9a745928fdee, type: 3}
+  clipPool:
+  - {fileID: 8300000, guid: 415c6e1af74c6134489c9a745928fdee, type: 3}
+  - {fileID: 8300000, guid: 034308cc2c676a843927f8405a130a5f, type: 3}
+  - {fileID: 8300000, guid: 0eb3cd7cfff91da4abcd32ff1114bacb, type: 3}
+  saveName: audioOutput
+  windowSize: 1024
+  hopSize: 0.5
+  useHannWindow: 1
+  autoRegenerate: 0
+  normalizeAmplitude: 1
+  paintDisplayMode: 0
+  frequencyDisplayMin: 0
+  frequencyDisplayMax: 5000
+  loudnessFloorDb: -96
+  gradient:
+    serializedVersion: 2
+    key0: {r: 0, g: 0, b: 0, a: 1}
+    key1: {r: 0.2697653, g: 0.109803915, b: 0.41568628, a: 1}
+    key2: {r: 0.16834284, g: 0.46563736, b: 0.9150943, a: 0}
+    key3: {r: 0.33753154, g: 0.9150943, b: 0.22014059, a: 0}
+    key4: {r: 0.8773585, g: 0.8773585, b: 0.120016046, a: 0}
+    key5: {r: 1, g: 0.5642496, b: 0.0990566, a: 0}
+    key6: {r: 1, g: 0, b: 0, a: 0}
+    key7: {r: 0, g: 0, b: 0, a: 0}
+    ctime0: 0
+    ctime1: 17155
+    ctime2: 27178
+    ctime3: 42983
+    ctime4: 49922
+    ctime5: 57247
+    ctime6: 62644
+    ctime7: 0
+    atime0: 0
+    atime1: 65535
+    atime2: 0
+    atime3: 0
+    atime4: 0
+    atime5: 0
+    atime6: 0
+    atime7: 0
+    m_Mode: 2
+    m_ColorSpace: -1
+    m_NumColorKeys: 7
+    m_NumAlphaKeys: 2
+  useGradient: 1
+  useDecibelThreshold: 0
+  decibelThreshold: -95.4
+  referenceNote:
+    noteLetter: 6
+    isSharp: 0
+    octaveNumber: 3
+  showOvertoneLines: 0
+  overtoneDeltaTest: 0
+  selectedFrequencyDisplayUseDb: 0
+  selectedFreqShowNormalized: 0
+  selectedFrequencyLineCol: {r: 1, g: 1, b: 1, a: 1}
+  selectedFrequencyLineFadeCol: {r: 0.33333334, g: 0.4, b: 0.48235294, a: 1}
+  selectedFrequencyNormalizedLineCol: {r: 0.3254717, g: 0.8019969, b: 1, a: 1}
+  selectedFreqMarkerCol: {r: 0.4862745, g: 1, b: 0.4, a: 1}
+  font: 3
+  fontSize: 0.22
+  textOffset: {x: -0.39, y: -0.2}
+  labelSpacingTarget: {x: 2.32, y: 1.32}
+  textCol: {r: 0.6415094, g: 0.6415094, b: 0.6415094, a: 1}
+  outlineCol: {r: 0.14901961, g: 0.13333334, b: 0.18039216, a: 1}
+  outlineThick: 0.02
+  selectionBoxCol: {r: 1, g: 1, b: 1, a: 1}
+  selectionBoxInvertedCol: {r: 1, g: 0.25943398, b: 0.25943398, a: 0.4}
+  selectionBoxAlpha: 0.13
+  selectionBoxOutlineThickness: 0.0025
+  mouseInfoOffset: {x: 0, y: 0.25}
+  mouseInfoSizePad: 0.19
+  mouseInfoFontSize: 0.23
+  infoBoxOutlineThickness: 0.01
+  infoBoxCol: {r: 0.63449323, g: 0.46257564, b: 0.9339623, a: 1}
+  infoBoxOutlineCol: {r: 0.39028862, g: 0.11356357, b: 0.8301887, a: 1}
+  infoBoxTextCol: {r: 1, g: 1, b: 1, a: 1}
+  playbackAmplitudeFactor: 1
+  meshRenderer: {fileID: 1408385375}
+  spectrogramCompute: {fileID: 7200000, guid: 72208586b7bee2f478d70b453ca83aa8, type: 3}
+  paint: {fileID: 907588780}
+  info_frequencySpacing: 21.533203
+  info_segmentDurationMs: 46.439907
+  debugInfo_inputState: 0
+  info_amplitudesNotepad:
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+--- !u!4 &304563165
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 304563163}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1408385377}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &907588779
 GameObject:
   m_ObjectHideFlags: 0
@@ -155,7 +303,7 @@ MonoBehaviour:
   temporalSmoothTime: 0.01
   pressureSmoothTime: 0.05
   alphaMultiplier: 0.1
-  brushColour: {r: 1, g: 1, b: 1, a: 0.5019608}
+  brushColour: {r: 1, g: 1, b: 1, a: 0.8}
   brushColourAlt: {r: 1, g: 1, b: 1, a: 0.101960786}
   pressureCurve:
     serializedVersion: 2
@@ -201,6 +349,96 @@ Transform:
   - {fileID: 1806646731}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &925633039
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 925633042}
+  - component: {fileID: 925633041}
+  - component: {fileID: 925633040}
+  m_Layer: 0
+  m_Name: Display Quad
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!23 &925633040
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 925633039}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
+  m_ForceMeshLod: -1
+  m_MeshLodSelectionBias: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 52bc24452c330754ea0d3489b83ab101, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_GlobalIlluminationMeshLod: 0
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_MaskInteraction: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &925633041
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 925633039}
+  m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!4 &925633042
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 925633039}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 16, y: 9, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1514574791}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &983338148
 GameObject:
   m_ObjectHideFlags: 0
@@ -234,7 +472,9 @@ MonoBehaviour:
   active: 1
   gain: 1
   clip: 1
+  useResampling: 1
   info_numChannels: 1
+  info_outputSampleRate: 0
 --- !u!82 &983338150
 AudioSource:
   m_ObjectHideFlags: 0
@@ -439,7 +679,7 @@ AudioListener:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1343300069}
   m_Enabled: 1
---- !u!1 &1364609191
+--- !u!1 &1408385374
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -447,9 +687,9 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 1364609194}
-  - component: {fileID: 1364609193}
-  - component: {fileID: 1364609192}
+  - component: {fileID: 1408385377}
+  - component: {fileID: 1408385376}
+  - component: {fileID: 1408385375}
   m_Layer: 0
   m_Name: Display Quad
   m_TagString: Untagged
@@ -457,13 +697,13 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!23 &1364609192
+--- !u!23 &1408385375
 MeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1364609191}
+  m_GameObject: {fileID: 1408385374}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -504,31 +744,32 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!33 &1364609193
+--- !u!33 &1408385376
 MeshFilter:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1364609191}
+  m_GameObject: {fileID: 1408385374}
   m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
---- !u!4 &1364609194
+--- !u!4 &1408385377
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1364609191}
+  m_GameObject: {fileID: 1408385374}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 16, y: 9, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1580896974}
+  m_Father: {fileID: 304563165}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1580896972
+--- !u!1 &1514574789
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -536,53 +777,43 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 1580896974}
-  - component: {fileID: 1580896975}
+  - component: {fileID: 1514574791}
+  - component: {fileID: 1514574790}
   m_Layer: 0
-  m_Name: Spectrogram
+  m_Name: Spectrogram (paint)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1580896974
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1580896972}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 1364609194}
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1580896975
+  m_IsActive: 0
+--- !u!114 &1514574790
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1580896972}
+  m_GameObject: {fileID: 1514574789}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 99b7cf1511da124418a52336a5925818, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::VidSpectrogram
-  clip: {fileID: 8300000, guid: 8d51bcb82ed9d4b44a6412a5aa53b4b2, type: 3}
-  saveName: spectrogramPaint
+  showHzText: 1
+  clip: {fileID: 8300000, guid: 0eb3cd7cfff91da4abcd32ff1114bacb, type: 3}
+  clipPool:
+  - {fileID: 8300000, guid: 415c6e1af74c6134489c9a745928fdee, type: 3}
+  - {fileID: 8300000, guid: 034308cc2c676a843927f8405a130a5f, type: 3}
+  - {fileID: 8300000, guid: 0eb3cd7cfff91da4abcd32ff1114bacb, type: 3}
+  saveName: audioOutput
   windowSize: 1024
   hopSize: 0.5
   useHannWindow: 1
   autoRegenerate: 0
-  paintDisplayMode: 0
+  normalizeAmplitude: 1
+  paintDisplayMode: 2
   frequencyDisplayMin: 0
   frequencyDisplayMax: 5000
-  loudnessFloorDb: -124.1
+  loudnessFloorDb: -96
   gradient:
     serializedVersion: 2
     key0: {r: 0, g: 0, b: 0, a: 1}
@@ -613,17 +844,79 @@ MonoBehaviour:
     m_ColorSpace: -1
     m_NumColorKeys: 7
     m_NumAlphaKeys: 2
-  useGradient: 0
-  fontType: 11
+  useGradient: 1
+  useDecibelThreshold: 0
+  decibelThreshold: -95.4
+  referenceNote:
+    noteLetter: 6
+    isSharp: 0
+    octaveNumber: 3
+  showOvertoneLines: 0
+  overtoneDeltaTest: 0
+  selectedFrequencyDisplayUseDb: 0
+  selectedFreqShowNormalized: 0
+  selectedFrequencyLineCol: {r: 1, g: 1, b: 1, a: 1}
+  selectedFrequencyLineFadeCol: {r: 0.33333334, g: 0.4, b: 0.48235294, a: 1}
+  selectedFrequencyNormalizedLineCol: {r: 0.3254717, g: 0.8019969, b: 1, a: 1}
+  selectedFreqMarkerCol: {r: 0.4862745, g: 1, b: 0.4, a: 1}
+  font: 3
   fontSize: 0.22
-  textOffset: {x: -0.24, y: -0.2}
-  labelSpacingTarget: 1.5
+  textOffset: {x: -0.39, y: -0.2}
+  labelSpacingTarget: {x: 2.32, y: 1.32}
   textCol: {r: 0.6415094, g: 0.6415094, b: 0.6415094, a: 1}
   outlineCol: {r: 0.14901961, g: 0.13333334, b: 0.18039216, a: 1}
   outlineThick: 0.02
-  meshRenderer: {fileID: 1364609192}
+  selectionBoxCol: {r: 1, g: 1, b: 1, a: 1}
+  selectionBoxInvertedCol: {r: 1, g: 0.25943398, b: 0.25943398, a: 0.4}
+  selectionBoxAlpha: 0.13
+  selectionBoxOutlineThickness: 0.0025
+  mouseInfoOffset: {x: 0, y: 0.25}
+  mouseInfoSizePad: 0.19
+  mouseInfoFontSize: 0.23
+  infoBoxOutlineThickness: 0.01
+  infoBoxCol: {r: 0.63449323, g: 0.46257564, b: 0.9339623, a: 1}
+  infoBoxOutlineCol: {r: 0.39028862, g: 0.11356357, b: 0.8301887, a: 1}
+  infoBoxTextCol: {r: 1, g: 1, b: 1, a: 1}
+  playbackAmplitudeFactor: 1
+  meshRenderer: {fileID: 925633040}
   spectrogramCompute: {fileID: 7200000, guid: 72208586b7bee2f478d70b453ca83aa8, type: 3}
   paint: {fileID: 907588780}
+  info_frequencySpacing: 21.533203
+  info_segmentDurationMs: 46.439907
+  debugInfo_inputState: 0
+  info_amplitudesNotepad:
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+--- !u!4 &1514574791
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1514574789}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 925633042}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1806646730
 GameObject:
   m_ObjectHideFlags: 0
@@ -704,6 +997,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
 --- !u!33 &1806646733
 MeshFilter:
@@ -718,6 +1012,7 @@ SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
   - {fileID: 1343300072}
-  - {fileID: 1580896974}
+  - {fileID: 304563165}
+  - {fileID: 1514574791}
   - {fileID: 907588781}
   - {fileID: 983338151}

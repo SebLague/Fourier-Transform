@@ -1,0 +1,14 @@
+#pragma kernel CopyCount
+
+StructuredBuffer<int> CountSource;
+RWStructuredBuffer<int> CountTarget;
+const int WriteIndex;
+const int ReadIndex;
+
+[numthreads(1,1,1)]
+void CopyCount (uint3 id : SV_DispatchThreadID)
+{
+    if (id.x != 0) return;
+
+    CountTarget[WriteIndex] = CountSource[ReadIndex];
+}

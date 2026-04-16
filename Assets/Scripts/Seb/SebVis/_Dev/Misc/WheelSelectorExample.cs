@@ -25,7 +25,7 @@ namespace Seb.Visualization.UI.Examples
 
 		void DrawWheel()
 		{
-			UIThemeCLASS theme = themeSelector.ActiveTheme;
+			UITheme theme = themeSelector.ActiveTheme;
 
 			UIHandle id = new("WheelSelector");
 			UI.WheelSelector(id, elements, pos, size, theme.wheelSelector, anchor, allowWrapAround);

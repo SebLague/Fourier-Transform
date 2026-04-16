@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using Seb.Helpers;
 using Seb.Visualization.Internal;
 using Seb.Visualization.Text.FontLoading;
 using Seb.Visualization.Text.Rendering;
@@ -151,6 +152,12 @@ namespace Seb.Visualization
             Line(origin, origin + offset, thickness, col, t);
         }
 
+        public static void LineCentered(Vector2 centre, Vector2 halfOffset, float thickness, Color col, float t = 1)
+        {
+            Line(centre - halfOffset, centre + halfOffset, thickness, col, t);
+        }
+
+
         public static void Line(Vector2 a, Vector2 b, float thickness, Color col, float t = 1)
         {
             if (thickness == 0 || t == 0 || a == b || col.a == 0) return;
@@ -279,7 +286,7 @@ namespace Seb.Visualization
         {
             if (resolution <= 0) return;
             resolution += 1;
-
+            
             Vector2 a = p0 - 2 * p1 + p2;
             Vector2 b = 2 * (p1 - p0);
             Vector2 c = p0;
@@ -291,6 +298,26 @@ namespace Seb.Visualization
             {
                 float t = i / (resolution - 1f);
                 points[i] = a * t * t + b * t + c;
+            }
+
+            for (int i = 0; i < points.Length - 1; i++)
+            {
+                Line(points[i], points[i + 1], thickness, col);
+            }
+        }
+        
+        public static void CubicBezier(Vector2 p0, Vector2 p1, Vector2 p2, Vector2 p3, float thickness, Color col, int resolution)
+        {
+            if (resolution <= 0) return;
+            resolution += 1;
+            
+          
+            Span<Vector2> points = stackalloc Vector2[resolution];
+
+            for (int i = 0; i < resolution; i++)
+            {
+                float t = i / (resolution - 1f);
+                points[i] = Maths.CubicBezier(p0, p1, p2, p3, t);
             }
 
             for (int i = 0; i < points.Length - 1; i++)
@@ -438,6 +465,12 @@ namespace Seb.Visualization
             }
 
             return true;
+        }
+
+        public static float GetMonospaceFontAdvance(FontType font, float fontSize)
+        {
+            FontData fontData = defaultFontsData[(int)font];
+            return fontData.MonospacedAdvanceWidth * fontSize;
         }
 
         // ------ Reserve and Modify Functions ------

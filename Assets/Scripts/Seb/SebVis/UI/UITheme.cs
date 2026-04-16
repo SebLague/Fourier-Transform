@@ -3,22 +3,13 @@ using UnityEngine;
 
 namespace Seb.Visualization.UI
 {
-    public struct UITheme
-    {
-        public float fontSizeSmall;
-        public float fontSizeMedium;
-        public float fontSizeLarge;
-        public Color colBG;
-
-        public ButtonTheme buttonTheme;
-        public InputFieldTheme inputFieldTheme;
-    }
-
-    public class UIThemeCLASS
+    public class UITheme
     {
         public FontType font;
         public float textSize;
         public Color panelCol;
+        public Color panelOutlineCol;
+        public float panelOutlineThickness;
 
         // ---- UI element themes ----
         public ButtonTheme buttonTheme;
@@ -115,5 +106,6 @@ namespace Seb.Visualization.UI
         public Color textCol;
         public Color bgCol;
         public Color focusBorderCol;
+        public float borderThickness;
     }
 }

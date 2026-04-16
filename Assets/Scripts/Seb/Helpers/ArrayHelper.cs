@@ -2,7 +2,7 @@ using System;
 
 namespace Seb.Helpers
 {
-    // ---- Version 0.3 [30/Dec/2025] ----
+    // ---- Version 0.5 [26/Jan/2026] ----
     public static class ArrayHelper
     {
         /// <summary> Randomly shuffles the elements of the given array </summary>
@@ -111,6 +111,18 @@ namespace Seb.Helpers
             return hasResized;
         }
 
+        public static T[] CreateCopy<T>(T[] copySource)
+        {
+            T[] target = new T[copySource.Length];
+
+            for (int i = 0; i < target.Length; i++)
+            {
+                target[i] = copySource[i];
+            }
+
+            return target;
+        }
+
 
         public static bool Resize<T>(ref T[] array, int size)
         {
@@ -127,6 +139,23 @@ namespace Seb.Helpers
             }
 
             return false;
+        }
+
+        public static T[] Concatenate<T>(T[] a, T[] b)
+        {
+            T[] combined = new T[a.Length + b.Length];
+
+            for (int i = 0; i < a.Length; i++)
+            {
+                combined[i] = a[i];
+            }
+
+            for (int i = 0; i < b.Length; i++)
+            {
+                combined[i + a.Length] = b[i];
+            }
+
+            return combined;
         }
     }
 }

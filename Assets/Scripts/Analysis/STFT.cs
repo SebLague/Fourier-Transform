@@ -8,19 +8,30 @@ namespace Audio.Analysis
 {
     public static class STFT
     {
-        public static StftResult Compute(Signal signal, int samplesPerSegment, float hopT = 1, bool hannWindow = false)
+        public static StftResult Compute(Signal signal, int samplesPerSegment, float hopT = 1, bool hannWindow = false, bool useFFT = false)
         {
             List<StftSegment> segments = new();
             int hopLength = (int)Math.Max(1, samplesPerSegment * hopT);
+
+            float[] segmentData = new float[samplesPerSegment];
 
             for (int offset = 0; offset < signal.NumSamples; offset += hopLength)
             {
                 int numSamplesRemaining = signal.NumSamples - offset;
                 int segmentLength = Min(samplesPerSegment, numSamplesRemaining);
-                float[] segmentSamples = signal.Samples.AsSpan(offset, segmentLength).ToArray();
-                if (hannWindow) ApplyHannWindow(segmentSamples);
+                Span<float> segmentSpan = signal.Samples.AsSpan(offset, segmentLength);
 
-                FrequencyData[] waves = DFT.Compute(segmentSamples, signal.SampleRate);
+                for (int i = 0; i < segmentData.Length; i++)
+                {
+                    segmentData[i] = i < segmentSpan.Length ? segmentSpan[i] : 0;
+                }
+
+                if (hannWindow) ApplyHannWindow(segmentData);
+
+                FrequencyData[] waves;
+                if (useFFT) waves = FFT.Compute(segmentData, signal.SampleRate);
+                else waves = DFT.Compute(segmentData, signal.SampleRate);
+                
                 StftSegment segment = new(waves, offset, segmentLength);
                 segments.Add(segment);
             }
@@ -36,7 +47,7 @@ namespace Audio.Analysis
             foreach (StftSegment segment in stft.Segments)
             {
                 float[] segmentSamples = Generate(segment.Spectrum, stft.SampleRate, segment.SampleCount);
-                
+
                 //
                 if (hannWindow) ApplyHannWindow(segmentSamples);
 
@@ -62,7 +73,7 @@ namespace Audio.Analysis
                 samples[i] *= smoothWindow;
             }
         }
-        
+
         public struct StftSegment
         {
             public FrequencyData[] Spectrum;
@@ -76,13 +87,17 @@ namespace Audio.Analysis
                 this.Spectrum = waves;
             }
         }
-        
+
         public readonly struct StftResult
         {
             public readonly StftSegment[] Segments;
             public readonly int SampleRate;
             public readonly int SampleCount;
             public readonly bool useWindow;
+
+            public int FrequencyCount => Segments[0].Spectrum.Length;
+            public float FrequencySpacing => Segments[0].Spectrum[1].Frequency - Segments[0].Spectrum[0].Frequency;
+            public float SegmentDuration => Segments[0].SampleCount / (float)SampleRate;
 
             public StftResult(StftSegment[] segments, Signal inputSignal, bool useWindow)
             {
@@ -91,7 +106,7 @@ namespace Audio.Analysis
                 this.SampleRate = inputSignal.SampleRate;
                 this.useWindow = useWindow;
             }
-            
+
             public StftResult(StftSegment[] segments, int rate, int count, bool useWindow)
             {
                 this.Segments = segments;

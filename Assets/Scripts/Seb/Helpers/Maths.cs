@@ -6,7 +6,7 @@ using static System.MathF;
 
 namespace Seb.Helpers
 {
-    // ---- Version 1.1 [13/Dec/2025] ----
+    // ---- Version 1.2 [12/Jan/2026] ----
     public static class Maths
     {
         /*
@@ -1073,20 +1073,21 @@ namespace Seb.Helpers
             if (data.Length == 0) return float.NaN;
             if (data.Length == 1) return data[0];
 
+
             // Sample
-            t = Math.Max(0, Math.Min(1, t));
-            int indexA = (int)(t * (data.Length - 1));
-            int indexB = Math.Min(data.Length - 1, indexA + 1);
+            double indexF = t * (data.Length - 1);
+            int indexA = (int)indexF;
+            int indexB = indexA + 1;
+
+            if (indexA < 0) return data[0];
+            if (indexB >= data.Length) return data[^1];
+
             float valA = data[indexA];
             float valB = data[indexB];
 
             // Interpolate
-            double interval = 1.0 / (data.Length - 1);
-            double intervalA = indexA * interval;
-            double intervalB = indexB * interval;
-            if (intervalA >= intervalB) return valB;
-            double intervalT = (t - intervalA) / (intervalB - intervalA);
-            return (float)(valA + (valB - valA) * intervalT);
+            double frac = indexF - indexA;
+            return Mathf.Lerp(valA, valB, (float)frac);
         }
 
         // X values expected to increase monotonically
@@ -1096,7 +1097,7 @@ namespace Seb.Helpers
 
             if (result == null) result = new float[count];
             else if (result.Length != count) Array.Resize(ref result, count);
-            
+
             int resultIndex = 0;
 
             for (int pointIndex = 0; pointIndex < points.Length - 1; pointIndex++)
